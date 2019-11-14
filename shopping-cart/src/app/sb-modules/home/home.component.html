@@ -1,1 +1,133 @@
-<p>home works!</p>
+
+    <head>
+      <!--   <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="home.css">
+        <link rel="stylesheet" type="text/css" href="./vendor/css/Grid.css">
+        <link rel="stylesheet" type="text/css" href="./vendor/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="./vendor/css/ionicons.min.css"> -->
+        <link  rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Dosis:400,600,700'>
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"  crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script> -->
+    
+    </head>
+
+
+    
+    
+<section>
+    <div class="slide-container">
+    <!-- Slideshow container -->
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 5</div>
+      <img src="../../../assets/images/offers/offer1.jpg" style="width:100%">
+      <div class="text">Caption Text</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 5</div>
+      <img src="../../../assets/images/offers/offer2.jpg" style="width:100%">
+      <div class="text">Caption Two</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 5</div>
+      <img src="../../../assets/images/offers/offer3.jpg" style="width:100%">
+      <div class="text">Caption Three</div>
+    </div>
+    <div class="mySlides fade">
+        <div class="numbertext">4 / 5</div>
+        <img src="../../../assets/images/offers/offer4.jpg" style="width:100%">
+        <div class="text">Caption Four</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">5 / 5</div>
+        <img src="../../../assets/images/offers/offer5.jpg" style="width:100%">
+        <div class="text">Caption Five</div>
+      </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div class="slides-dot">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+  </div>
+</div>
+</section>
+
+
+<section>
+<div class="row home-tile clearfix">
+    <div class="col span-1-of-2">
+        <figure class="left-image">
+            <img src="../../../assets/images/category/fruits.png" alt="fruit basket">
+        </figure>
+        </div>
+        <div class="col span-1-of-2 title-text clearfix">
+            <h2>Fruits & Vegetables</h2>
+            <p>A variety of fresh fruits and Vegetables</p>
+            <a href="#" class="btn-tile">Explore fruit-and-veg</a>
+            </div>
+</div>
+
+<div class="row home-tile ">
+       
+            <div class="col span-1-of-2 title-text clearfix">
+                <h2>Bakery Cakes and Dairy</h2>
+                <p>The best cupcakes, cookies, cakes, pies, cheesecakes, fresh bread, biscotti, muffins, bagels, fresh coffee, milk and more.</p>
+                <a href="#" class="btn-tile">Explore fruit-and-veg</a>
+                </div>
+
+                <div class="col span-1-of-2">
+                        <figure class="left-image">
+                            <img src="../../../assets/images/category/bakery.png" alt="fruit basket">
+                        </figure>
+                        </div>
+    </div>
+
+
+</section>
+
+
+    <script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+       
+
+    

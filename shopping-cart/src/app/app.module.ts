@@ -8,6 +8,8 @@ import { HomeComponent } from './sb-modules/home/home.component';
 import { LoginComponent } from './sb-modules/login/login.component';
 import { PlpComponent } from './sb-modules/plp/plp.component';
 import { RegisterComponent } from './sb-modules/register/register.component';
+import { HeaderComponent } from './core/layout/header/header.component';
+import { FooterComponent } from './core/layout/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { RegisterComponent } from './sb-modules/register/register.component';
     HomeComponent,
     LoginComponent,
     PlpComponent,
-    RegisterComponent
+    RegisterComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
