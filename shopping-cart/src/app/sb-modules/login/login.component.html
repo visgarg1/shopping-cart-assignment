@@ -1,49 +1,83 @@
-
-    <head>
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!--   <link rel="stylesheet" type="text/css" href="style.css">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--   <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" type="text/css" href="./vendor/css/Grid.css">
         <link rel="stylesheet" type="text/css" href="./vendor/css/normalize.css">
         <link rel="stylesheet" type="text/css" href="./vendor/css/ionicons.min.css"> -->
-        <link  rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Dosis:400,600,700'>
-        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"  crossorigin="anonymous">
+    <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Dosis:400,600,700'>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"  crossorigin="anonymous">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script> -->
-    </head>
+</head>
 
-    <body class="container">
-   
+<body class="container">
 
-       <section class="section-form">
-            
-            <div class="row">
-                <form method="post" action="#" class="contact-form">
 
-                    <div class="row">
-                            <div class="col span-1-of-2">
-                                <h1>Login</h1> 
-                                <p>Get access to your orders wish list and recommendations </p>
+    <section class="section-form">
+
+        <div class="row">
+            <form class="contact-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+                <div class="row">
+                    <div class="col span-1-of-2">
+                        <h1>Login</h1>
+                        <p>Get access to your orders wish list and recommendations </p>
+                    </div>
+                    <div class="col span-1-of-2">
+                        <div class="row form-input">
+                            <div>
+                                <label for="email">Email</label>
                             </div>
-                            <div class="col span-1-of-2">
-                                    <div class="row form-input">
-                                        <div>
-                                        <label for="email">Email</label> 
-                                        </div>
-                                        <input type="text" class="email-input" name="email" size="50" placeholder="Email" required>
-                                    </div>
-                                    
-                                    <div class="row form-input">
-                                        <input type="text" name="password" size="50" placeholder="Password" required>
-                                    </div>
+                            <input type="email" formControlName="email" class="email-input" size="50" placeholder="Email"
+                                 required>
+                                 <div *ngIf="f.email.invalid && (f.email.dirty || f.email.touched)"
+                                 class="alert alert-danger">
+                                 <div *ngIf="f.email.errors.required">
+                                    email is required.
+                                </div>
+                                <div *ngIf="f.email.status == 'INVALID'">
+                                     Please enter a valid email.
+                                </div>
+                                </div>
+                        </div>
 
-                                    <div class="row form-input">
-                                        <a href="#" class="btn-login">Login</a>
-                                    </div>
-                            </div>
+                        <div class="row form-input">
+                            <input type="password" formControlName="password" size="50" placeholder="Password"
+                                 required>
+                                 <div *ngIf="f.password.invalid && (f.password.dirty || f.password.touched)"
+                                 class="alert alert-danger">
+                                 <div *ngIf="f.password.errors.required">
+                                    password is required.
+                                </div>
+                                <div *ngIf="f.password.errors.minlength">
+                                    password must be at least 6 characters long.
+                                </div>
+                                <div *ngIf="f.password.errors.wrongPassword">
+                                    password must have a number and alphabet
+                                </div>
+                                
+
+                           <!--  <div *ngIf="password && loginForm.password.invalid && (password.dirty || password.touched)"
+                                class="alert alert-danger">
+
+                                <div *ngIf="password.errors.required">
+                                    password is required.
+                                </div>
+                                <div *ngIf="password.errors.minlength">
+                                    password must be at least 8 characters long.
+                                </div>
+                            </div> -->
+
+                        </div>
                     </div>
 
-                </form>
-                
-            </div>
+                        <div class="row form-input">
+                            <button href="#" class="btn-login" type="submit">Login</button>
+                        </div>
+                    </div>
+                </div>
 
-        </section>
+            </form>
 
+        </div>
+
+    </section>
