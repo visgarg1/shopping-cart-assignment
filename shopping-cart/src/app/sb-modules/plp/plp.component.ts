@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ShoppingCartDataService } from 'src/app/services/shopping-cart-data.service';
+import { ProductsResponse } from 'src/app/models/products-res';
+import { AppRoutingModule } from 'src/app/app-routing.module';
 
 @Component({
   selector: 'app-plp',
@@ -7,9 +10,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlpComponent implements OnInit {
 
-  constructor() { }
+  constructor(private shoppingCartDataService: ShoppingCartDataService) { }
+
+  products: ProductsResponse[];
+  category: string;
+  categories = {
+    fruits: '5b6899953d1a866534f516e2',
+    bakery: '5b6899123d1a866534f516de',
+    beverage: '5b675e5e5936635728f9fc30',
+    beauty: '5b68994e3d1a866534f516df',
+    baby: '5b6c75e101a7c3842953089a'
+  };
 
   ngOnInit() {
+      this.fetchProducts();
   }
 
+  fetchProducts() {
+    this.shoppingCartDataService.getProducts().subscribe((productData: ProductsResponse[]) => {
+      this.products = productData;
+      console.log(this.products);
+    });
+  }
 }

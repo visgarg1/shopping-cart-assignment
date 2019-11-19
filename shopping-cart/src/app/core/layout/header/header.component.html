@@ -1,28 +1,27 @@
 <header>
     <div class="row">
-     <div class="col span-1-of-3 xyz">
-     <figure class="sabka-bazar-logo">
-         <img src="../../../assets/images/logo.png" alt="logo">
-     </figure>
-     </div>
-     <div class="col span-1-of-3 xyz navigate">
-        <ul>
-            <li routerLink="/home">Home</li>
-            <li routerLink="/plp">Products</li>
-        </ul>
-     </div>
-     <div class="col span-1-of-3 xyz navigate2">
-         <div class="row">
-             <ul>
-                 <li routerLink="/login">Sign in</li>
-                 <li routerLink="/register">Register</li>
-             </ul>
-        </div>
-        <div class="row">
-            
-            <a href="#" class="btn btn-cart"><i class="ion-ios-cart-outline icon-big"></i> 0 items</a>
+        <div class="col span-1-of-3">
+            <img src="../../../assets/images/logo.png" alt="sabka bazar logo">
         </div>
 
-     </div>
+        <nav role="navigation" aria-label="header navigation" class="col span-1-of-3 navigate">
+            <ul>
+                <li><a routerLink="/home">Home</a></li>
+                <li><a routerLink="/plp">Products</a></li>
+            </ul>
+        </nav>
+        <div class="col span-1-of-3 navigate2">
+            <nav role="navigation" aria-label="login navigation" class="row">
+                <ul>
+                    <li><a routerLink="/login">Sign in</a></li>
+                    <li><a routerLink="/register">Register</a></li>
+                </ul>
+            </nav>
+            <div class="row">
+                <a href="#" class="btn btn-cart" aria-label="cart button"><i class="ion-ios-cart-outline icon-big"></i>
+                    0 items</a>
+            </div>
+
+        </div>
     </div>
 </header>

@@ -28,10 +28,10 @@
                                 <label for="email">Email</label>
                             </div>
                             <input type="email" formControlName="email" class="email-input" size="50" placeholder="Email"
-                                 required>
+                                 required aria-required="true" aria-describedby="email-required">
                                  <div *ngIf="f.email.invalid && (f.email.dirty || f.email.touched)"
                                  class="alert alert-danger">
-                                 <div *ngIf="f.email.errors.required">
+                                 <div id="email-required" *ngIf="f.email.errors.required">
                                     email is required.
                                 </div>
                                 <div *ngIf="f.email.status == 'INVALID'">
@@ -42,10 +42,10 @@
 
                         <div class="row form-input">
                             <input type="password" formControlName="password" size="50" placeholder="Password"
-                                 required>
+                                 required aria-required="true" aria-describedby="password-required">
                                  <div *ngIf="f.password.invalid && (f.password.dirty || f.password.touched)"
                                  class="alert alert-danger">
-                                 <div *ngIf="f.password.errors.required">
+                                 <div id="password-required" *ngIf="f.password.errors.required">
                                     password is required.
                                 </div>
                                 <div *ngIf="f.password.errors.minlength">

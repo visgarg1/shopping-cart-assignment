@@ -25,49 +25,52 @@
                                 <label>First Name</label>
                             </div>
                             <input type="text" class="email-input" formControlName="firstname" size="50"
-                                placeholder="First Name">
+                                placeholder="First Name" aria-required="true" aria-describedby="name-required">
                             <div *ngIf="f.firstname.invalid && (f.firstname.dirty || f.firstname.touched)"
                                 class="alert alert-danger">
-                                <div *ngIf="f.firstname.errors.required">
+                                <div id="name-required" *ngIf="f.firstname.errors.required">
                                     First Name is required.
                                 </div>
                             </div>
                         </div>
 
                         <div class="row form-input">
-                            <input type="text" formControlName="lastname" size="50" placeholder="Last Name">
+                            <input type="text" formControlName="lastname" size="50" placeholder="Last Name"
+                             aria-required="true" aria-describedby="last-required">
                             <div *ngIf="f.lastname.invalid && (f.lastname.dirty || f.lastname.touched)"
                             class="alert alert-danger">
-                            <div *ngIf="f.lastname.errors.required">
-                                First Name is required.
+                            <div id="last-required" *ngIf="f.lastname.errors.required">
+                                Last Name is required.
                             </div>
                         </div>
                         </div>
 
                         <div class="row form-input">
-                            <input type="text" formControlName="email" size="50" placeholder="Email">
+                            <input type="text" formControlName="email" size="50" placeholder="Email"
+                            aria-describedby="email-required" aria-required="true">
                             <div *ngIf="f.email.invalid && (f.email.dirty || f.email.touched)"
                             class="alert alert-danger">
-                            <div *ngIf="f.email.errors.required">
+                            <div id="email-required" *ngIf="f.email.errors.required">
                                email is required.
                            </div>
-                           <div *ngIf="f.email.status == 'INVALID'">
+                           <div id="email-required" *ngIf="f.email.status == 'INVALID'">
                                 Please enter a valid email.
                            </div>
                            </div>
                         </div>
 
                         <div class="row form-input">
-                            <input type="password" formControlName="password" size="50" placeholder="Password">
+                            <input type="password" formControlName="password" size="50" placeholder="Password" 
+                            aria-describedby="password-required" aria-required="true">
                             <div *ngIf="f.password.invalid && (f.password.dirty || f.password.touched)"
                                  class="alert alert-danger">
-                                 <div *ngIf="f.password.errors.required">
+                                 <div id="password-required" *ngIf="f.password.errors.required">
                                     password is required.
                                 </div>
-                                <div *ngIf="f.password.errors.minlength">
+                                <div id="password-required" *ngIf="f.password.errors.minlength">
                                     password must be at least 6 characters long.
                                 </div>
-                                <div *ngIf="f.password.errors.wrongPassword">
+                                <div id="password-required" *ngIf="f.password.errors.wrongPassword">
                                     password must have a number and alphabet
                                 </div>
                             </div>
@@ -75,13 +78,14 @@
 
                         <div class="row form-input">
                             <input type="text" formControlName="confirmpassword" size="50"
-                                placeholder="Confirm Password" (focusout)="checkPasswordMatch()" (focus)="checkPasswordMatchFocus()">
+                                placeholder="Confirm Password" (focusout)="checkPasswordMatch()" (focus)="checkPasswordMatchFocus()" 
+                                aria-describedby="confirm-required" aria-required="true">
                                 <div *ngIf="f.confirmpassword.invalid && (f.confirmpassword.dirty || f.confirmpassword.touched)"
                                  class="alert alert-danger">
-                                 <div *ngIf="f.confirmpassword.errors.required">
+                                 <div id="confirm-required" *ngIf="f.confirmpassword.errors.required">
                                     password is required.
                                 </div>
-                                <div   *ngIf="passwordMatchFlag && f.confirmpassword.errors.mustMatch">
+                                <div id="confirm-required"  *ngIf="passwordMatchFlag && f.confirmpassword.errors.mustMatch">
                                     both password should Match
                                 </div>
                             </div>
