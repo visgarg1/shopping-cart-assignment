@@ -1,27 +1,39 @@
 .section-plp {
-    width: 68%;
+    width: 100%;
     margin: 0 auto;
 }
 
 .sidebar {
-    background-color: rgb(241, 241, 241);
-    height: 100vh;
+    display: none;
 }
 
-.sidebar ul {
-    padding-left: 10px;
-}
 
-.sidebar ul li {
-    border-bottom: 1px solid grey;
-    list-style: none;
-    padding: 10px;
+@media only screen and (min-width:1023px){
 
 }
 
-.products {
+@media only screen and (min-width:768px){
+    .sidebar {
+        display: block;
+        background-color: rgb(241, 241, 241);
+        height: 100vh;
+    }
+    
+    .sidebar ul {
+        padding-left: 10px;
+    }
+    
+    .sidebar ul li {
+        border-bottom: 1px solid grey;
+        list-style: none;
+        padding: 10px;
+    
+    }
+    .section-plp {
+        width: 80%;
+        margin: 0 auto;
+    }
 }
-
 .item img {
     width: 100%;
 }

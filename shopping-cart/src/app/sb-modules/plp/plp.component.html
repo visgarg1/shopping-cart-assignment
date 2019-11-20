@@ -1,44 +1,36 @@
 
     <head>
-      <!--   <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="stylesheet" type="text/css" href="./resources/css/plp.css">
-        <link rel="stylesheet" type="text/css" href="./vendor/css/Grid.css">
-        <link rel="stylesheet" type="text/css" href="./vendor/css/normalize.css">
-        <link rel="stylesheet" type="text/css" href="./vendor/css/ionicons.min.css"> -->
         <link  rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Dosis:400,600,700'>
         
     </head>
 
-    <body class="container">
+    <body>
        <section class="section-plp">
         <div class="row">
             <div class="col span-2-of-10 sidebar">
                 <ul>
-                    <li (click)="category('fruit')"> Fruits & Vegitables</li>
-                    <li (click)="category('bakery')">Backery Cakes and Dairy</li>
-                    <li (click)="category('beverage')">Beverages</li>
-                    <li (click)="category('beauty')">Beauty and Hygiene</li>
-                    <li (click)="category('baby')">Baby Care</li>
+                    <li (click)="categorySelect(categories.fruits)"> Fruits & Vegitables</li>
+                    <li (click)="categorySelect(categories.bakery)">Backery Cakes and Dairy</li>
+                    <li (click)="categorySelect(categories.beverage)">Beverages</li>
+                    <li (click)="categorySelect(categories.beauty)">Beauty and Hygiene</li>
+                    <li (click)="categorySelect(categories.baby)">Baby Care</li>
                 </ul>
             </div>
 
 
             <div class="col span-8-of-10 products">
                 <section class="section-products">
-                    <div class="row"> {{category}}
-                        <div *ngFor="let product of products" class="col span-1-of-4 item">
+                    <div class="row">
+                       <div *ngFor="let product of selectedProduts"  class="col span-1-of-4 item">
                             <h3>{{product.name}}</h3>
-                            <img src="{{product.imageURL}}">
+                            <img src="../../../assets{{product.imageURL}}">
                             <p>
                                     {{product.description}}
-                               <!--  Kiwis are oval shaped with a brownish outer skin. the flesh is bright green and juicy with tiny edible black seeds. -->
                             </p>
-
                             <div class="price-tag">
                                     MRP Rs. {{product.price}} <a href="#">Buy Now</a>
                             </div>
                         </div>
-        
                     </div>
                 </section>
             </div>

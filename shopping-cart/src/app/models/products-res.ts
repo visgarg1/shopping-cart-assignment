@@ -4,7 +4,7 @@ export interface ProductsResponse {
         descripton: string;
         price: number;
         stock: number;
-        categry: string;
+        category: string;
         sku: string;
         id: string;
 }
