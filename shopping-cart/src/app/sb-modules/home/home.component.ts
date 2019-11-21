@@ -22,7 +22,7 @@ this.getBannersData();
       this.banners = res;
       console.log(this.banners);
     });
-   
   }
+
 
 }

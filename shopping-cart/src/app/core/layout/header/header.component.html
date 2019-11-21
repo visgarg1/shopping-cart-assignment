@@ -1,7 +1,7 @@
 <header>
 
-    <!-- Top Navigation Menu -->
-<!-- <div class="topnav">
+  <!-- Top Navigation Menu -->
+  <!-- <div class="topnav">
         <div [ngClass]="addHamburgerCss === true ? 'myLinks' : 'myLinksHide'"> {{addHamburgerCss}}
           <a href="#news">News</a>
           <a href="#contact">Contact</a>
@@ -11,13 +11,13 @@
           <i class="fa fa-bars"></i>
         </a>
       </div> -->
-      
-     
-      <!-- End smartphone / tablet look -->
 
 
-    
-    <div class="row desktop">
+  <!-- End smartphone / tablet look -->
+
+
+
+  <!--    <div class="row desktop">
         <div class="col span-1-of-3">
            <a routerLink='/login'> <img src="../../../assets/images/logo.png" alt="sabka bazar logo" title="sabka bazar"></a>
         </div>
@@ -28,36 +28,64 @@
                 <li role="presentation"><a routerLink="/plp">Products</a></li>
             </ul>
         </nav>
-        <div class="col span-1-of-3 ">
+        <div class="signin-col span-1-of-3 ">
             <div class="signin-nav">
             <nav role="navigation" aria-label="login navigation" class="row nav-login">
                 <ul>
-                    <li role="presentation"><a routerLink="/login">Sign in</a></li>
+                    <li role="presentation"><a routerLink="/login" class="signin-text">Sign in</a></li>
                     <li role="presentation"><a routerLink="/register" >Register</a></li>
                 </ul>
             </nav>
             <div class="row">
-                <a href="#" class="btn-cart" aria-label="cart button">
+                <a href="#" class="btn btn-cart" aria-label="cart button">
                     <img src="../../../../assets/images/cart.svg" alt="cart logo" title="cart logo" class="cart-img">
                    <div class="cart-items-text"> 0 items</div></a>
                 </div>
         </div>
         </div>
+    </div> -->
+
+  <div class="row desktop">
+    <div class="col span-1-of-3">
+      <a routerLink='/login'> <img src="../../../assets/images/logo.png" alt="sabka bazar logo" title="sabka bazar"></a>
     </div>
-           <div class="topnav">
-                <a routerLink='/login'> <img src="../../../assets/images/logo.png" alt="sabka bazar logo" title="sabka bazar" class="logo-img"></a>
-                    <div [ngClass]="addHamburgerCss === true ? 'myLinks' : 'myLinksHide'"> 
-                      <br>
-                        <a routerLink="/home" (click)="hamburgerClicked()">Home</a>
-                        <a routerLink="/plp" (click)="hamburgerClicked()">Products</a>
-                        <a routerLink="/login" (click)="hamburgerClicked()">Login</a>
-                        <a routerLink="/register" (click)="hamburgerClicked()">Register</a>
-                    </div>
-                    <a class="icon" (click)="hamburgerClicked()">
-                            <i class="fa fa-bars"></i>
-                          </a>
-                  </div>
+
+    <nav role="navigation" aria-label="header navigation" class="col span-1-of-3 navigate">
+      <ul>
+        <li role="presentation"><a routerLink="/home">Home</a></li>
+        <li role="presentation"><a routerLink="/plp">Products</a></li>
+      </ul>
+    </nav>
+    <div class="signin-col span-1-of-3 ">
+      <div class="row">
+        <ul class="signin-links">
+          <li role="presentation"><a routerLink="/login">Sign in</a></li>
+          <li role="presentation"><a routerLink="/register">Register</a></li>
+        </ul>
+        <a href="#" class="btn btn-cart" aria-label="cart button">
+          <img src="../../../../assets/images/cart.svg" alt="cart logo" title="cart logo" class="cart-img">
+          <div class="cart-items-text"> 0 items</div>
+        </a>
+      </div>
+    </div>
+  </div>
 
 
-  
+  <div class="topnav">
+    <a routerLink='/login'> <img src="../../../assets/images/logo.png" alt="sabka bazar logo" title="sabka bazar"
+        class="logo-img"></a>
+    <div [ngClass]="addHamburgerCss === true ? 'myLinks' : 'myLinksHide'">
+      <br>
+      <a routerLink="/home" (click)="hamburgerClicked()">Home</a>
+      <a routerLink="/plp" (click)="hamburgerClicked()">Products</a>
+      <a routerLink="/login" (click)="hamburgerClicked()">Login</a>
+      <a routerLink="/register" (click)="hamburgerClicked()">Register</a>
+    </div>
+    <a class="icon" (click)="hamburgerClicked()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+
+
 </header>

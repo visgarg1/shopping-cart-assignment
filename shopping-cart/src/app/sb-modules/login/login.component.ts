@@ -18,13 +18,15 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6), passwordCustomValidator(/^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]+)$/)]]
+      password: ['', [Validators.required, Validators.minLength(6), passwordCustomValidator(/^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]+)$/)
+    , Validators.pattern(/^\S*$/)]]
   });
   }
 
   get f() { return this.loginForm.controls; }
 
   onSubmit() {
+    console.log(this.loginForm);
     this.submitted = true;
     if (this.loginForm.valid) {
       this.route.navigate(['/home']);
