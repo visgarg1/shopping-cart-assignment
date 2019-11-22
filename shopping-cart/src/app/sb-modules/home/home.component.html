@@ -20,7 +20,7 @@
 <div class="slideshow-container">
 
     <!-- Full-width images with number and caption text -->
-    <div class="mySlides fade">
+    <div class="mySlides fade" >
       <div class="numbertext">1 / 5</div>
       <img src="../../../assets/images/offers/offer1.jpg" style="width:100%">
       <div class="text">Caption Text</div>
@@ -49,18 +49,18 @@
       </div>
   
     <!-- Next and previous buttons -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <a class="prev" (click)="plusSlides(-1)">&#10094;</a>
+    <a class="next" (click)="plusSlides(1)">&#10095;</a>
   </div>
   <br>
   
   <!-- The dots/circles -->
   <div class="slides-dot">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-    <span class="dot" onclick="currentSlide(4)"></span>
-    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" [ngClass]="divStyle2" (click)="currentSlide(1)"></span>
+    <span class="dot" (click)="currentSlide(2)"></span>
+    <span class="dot" (click)="currentSlide(3)"></span>
+    <span class="dot" (click)="currentSlide(4)"></span>
+    <span class="dot" (click)="currentSlide(5)"></span>
   </div>
 </div>
 </section>
@@ -99,7 +99,7 @@
 </section>
 
 
-    <script>
+   <!--  <script>
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -126,7 +126,7 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
 }
-</script>
+</script> -->
 
        
 

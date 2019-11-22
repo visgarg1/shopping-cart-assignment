@@ -50,14 +50,14 @@
       <a routerLink='/login'> <img src="../../../assets/images/logo.png" alt="sabka bazar logo" title="sabka bazar"></a>
     </div>
 
-    <nav role="navigation" aria-label="header navigation" class="col span-1-of-3 navigate">
-      <ul>
+    <nav role="navigation" aria-label="Global links" class="col span-1-of-3 navigate">
+      <ul role="presentation">
         <li role="presentation"><a routerLink="/home">Home</a></li>
         <li role="presentation"><a routerLink="/plp">Products</a></li>
       </ul>
     </nav>
     <div class="signin-col span-1-of-3 ">
-      <div class="row">
+      <nav role="navigation" aria-label="signin-nav navigation" class="row">
         <ul class="signin-links">
           <li role="presentation"><a routerLink="/login">Sign in</a></li>
           <li role="presentation"><a routerLink="/register">Register</a></li>
@@ -66,7 +66,7 @@
           <img src="../../../../assets/images/cart.svg" alt="cart logo" title="cart logo" class="cart-img">
           <div class="cart-items-text"> 0 items</div>
         </a>
-      </div>
+      </nav>
     </div>
   </div>
 
