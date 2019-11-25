@@ -74,7 +74,7 @@
   <div class="topnav">
     <a routerLink='/login'> <img src="../../../assets/images/logo.png" alt="sabka bazar logo" title="sabka bazar"
         class="logo-img"></a>
-    <div [ngClass]="addHamburgerCss === true ? 'myLinks' : 'myLinksHide'">
+    <div [ngClass]="addHamburgerCss === true ? 'myLinks' : 'myLinksHide'" >
       <br>
       <a routerLink="/home" (click)="hamburgerClicked()">Home</a>
       <a routerLink="/plp" (click)="hamburgerClicked()">Products</a>

@@ -5,6 +5,12 @@ height: 30px;
 padding: 0;
 margin:0;
 }
+
+header {
+  border-bottom: 2px solid #cfcfcf;
+  box-shadow: 3px 3px 2px rgb(250, 249, 249);
+}
+
   .topnav {
     overflow: hidden;
     background-color: white;
@@ -13,6 +19,7 @@ margin:0;
   }  
 
   .myLinks {
+   
     display: block;
 }
 
@@ -34,6 +41,10 @@ margin:0;
     right: 0;
     top: 0;
   }
+
+/*   .transition-nav {
+    transition: display 2s;
+  } */
   
   .topnav a:hover {
     background-color: #ddd;

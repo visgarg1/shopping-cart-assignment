@@ -25,14 +25,22 @@
 }
 
 .section-form {
-    width: 100%;
-    margin: 50px 0 50px 50px;
+    margin: 50px 50px 50px 50px;
 }
 
 .form-input {
     margin-top: 50px;
     margin-bottom: 15px;
 } 
+
+input {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid #cfcfcf;
+    padding-top: 10px;  
+    width: 250px;
+}
 
 .login-text {
 margin-bottom: 15px;
@@ -50,6 +58,9 @@ margin-bottom: 15px;
     }
     .btn-login {
      width: 53%;
+        }
+        input {
+            width: 53%;
         }
 
   .main-section-text {
