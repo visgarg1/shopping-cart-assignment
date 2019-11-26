@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ShoppingCartDataService } from 'src/app/services/shopping-cart-data.service';
 import { ProductsResponse } from 'src/app/models/products-res';
 import { AppRoutingModule } from 'src/app/app-routing.module';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-plp',
@@ -10,7 +11,14 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
 })
 export class PlpComponent implements OnInit {
 
-  constructor(private shoppingCartDataService: ShoppingCartDataService) { }
+  constructor(private shoppingCartDataService: ShoppingCartDataService, private router: Router) {
+
+    if (this.router.getCurrentNavigation() && this.router.getCurrentNavigation().extras &&
+    this.router.getCurrentNavigation().extras.state &&
+     this.router.getCurrentNavigation().extras.state.productId) {
+      this.homeproductId = this.router.getCurrentNavigation().extras.state.productId;
+      }
+  }
 
   productsRes: ProductsResponse[];
   selectedProduts: ProductsResponse[];
@@ -23,15 +31,21 @@ export class PlpComponent implements OnInit {
     beauty: '5b68994e3d1a866534f516df',
     baby: '5b6899683d1a866534f516e0'
   };
+  homeproductId: string;
 
   ngOnInit() {
       this.fetchProducts();
   }
 
+
   fetchProducts() {
     this.shoppingCartDataService.getProducts().subscribe((productData: ProductsResponse[]) => {
       this.productsRes = productData;
       this.selectedProduts = productData;
+
+      if (this.homeproductId) {
+        this.categorySelect(this.homeproductId);
+      }
     });
   }
 

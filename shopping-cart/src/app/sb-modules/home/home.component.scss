@@ -15,14 +15,15 @@
 
 .slide-container {
     border-bottom: 2px solid #cfcfcf;
-    box-shadow: 3px 3px 2px rgb(250, 249, 249);
+    /* box-shadow: 3px 3px 2px rgb(250, 249, 249); */
+ /*  margin: 0 15%; */
     }
 
     /* Slideshow container */
 .slideshow-container {
     max-width: 1000px;
     position: relative;
-    margin: auto;
+   margin-top: 10px;
    
   }
 
@@ -124,7 +125,13 @@
     height: auto; */
   }
 
-  
+/*   .left-image {
+      float: right;
+  }
+
+  .title-text {
+      float: left;
+  } */
   
   .span-1-of-2 {
     width: 100%;
@@ -152,11 +159,17 @@
 
     .left-image img { 
         height: 150px;
+        margin-left: 20%;
     }
     .below-row {
         margin: 0 200px;
     }
+
+    .slide-container {
+    border-bottom: 2px solid #cfcfcf;
+    margin: 10px 15% 0;
   }
+}
 
   @media only screen and (min-width:1023px){
     .home-tile {
