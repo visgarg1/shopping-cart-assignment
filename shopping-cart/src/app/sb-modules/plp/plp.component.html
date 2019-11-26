@@ -8,12 +8,8 @@
        <section class="section-plp">
         <div class="row">
             <div class="col span-2-of-10 sidebar">
-                <ul>
-                    <li (click)="categorySelect(categories.fruits)"> Fruits & Vegitables</li>
-                    <li (click)="categorySelect(categories.bakery)">Backery Cakes and Dairy</li>
-                    <li (click)="categorySelect(categories.beverage)">Beverages</li>
-                    <li (click)="categorySelect(categories.beauty)">Beauty and Hygiene</li>
-                    <li (click)="categorySelect(categories.baby)">Baby Care</li>
+                <ul *ngFor="let category of categories; let i = index">
+                    <li (click)="categorySelect(category.value,i)" [class.active]="categorySelected === category.value" >{{category.name}}</li>
                 </ul>
             </div>
 

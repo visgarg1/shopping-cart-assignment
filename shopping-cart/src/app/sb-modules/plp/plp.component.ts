@@ -23,16 +23,15 @@ export class PlpComponent implements OnInit {
   productsRes: ProductsResponse[];
   selectedProduts: ProductsResponse[];
   category: string;
-  categorySelected = 'all';
-  categories = {
-    fruits: '5b6899953d1a866534f516e2',
-    bakery: '5b6899123d1a866534f516de',
-    beverage: '5b675e5e5936635728f9fc30',
-    beauty: '5b68994e3d1a866534f516df',
-    baby: '5b6899683d1a866534f516e0'
-  };
-  homeproductId: string;
+  categorySelected : string;
+  categories = [{ name: 'Fruits & Vegitables' , value: '5b6899953d1a866534f516e2' },
+  { name: 'Backery Cakes and Dairy' , value: '5b6899123d1a866534f516de' },
+  { name: 'Beverages' , value: '5b675e5e5936635728f9fc30' },
+  { name: 'Beauty and Hygiene' , value: '5b68994e3d1a866534f516df' },
+  { name: 'Baby Care' , value: '5b6899683d1a866534f516e0' }];
 
+  homeproductId: string;
+ 
   ngOnInit() {
       this.fetchProducts();
   }

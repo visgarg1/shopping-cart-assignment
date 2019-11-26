@@ -5,8 +5,12 @@
 
 .sidebar {
     display: none;
+    
 }
 
+.active {
+    background-color: #dddddd;
+}
 
 @media only screen and (min-width:1023px){
 
@@ -17,6 +21,7 @@
         display: block;
         background-color: rgb(241, 241, 241);
         height: 100vh;
+        cursor: pointer;
     }
     
     .sidebar ul {
