@@ -33,6 +33,11 @@ header {
     text-decoration: none;
     /* font-size: 20px; */
     display: block;
+
+    &:hover {
+      background-color: #ddd;
+      color: black;
+    }
   }
   
   .topnav a.icon {
@@ -46,10 +51,10 @@ header {
     transition: display 2s;
   } */
   
-  .topnav a:hover {
+/*   .topnav a:hover {
     background-color: #ddd;
     color: black;
-  }
+  } */
   
   .active {
     background-color: #4CAF50;

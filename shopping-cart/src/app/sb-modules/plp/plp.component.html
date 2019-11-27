@@ -7,26 +7,30 @@
     <body>
        <section class="section-plp">
         <div class="row">
-            <div class="col span-2-of-10 sidebar">
+            <nav class="col span-2-of-10 sidebar">
                 <ul *ngFor="let category of categories; let i = index">
                     <li (click)="categorySelect(category.value,i)" [class.active]="categorySelected === category.value" >{{category.name}}</li>
                 </ul>
-            </div>
+            </nav>
 
 
-            <div class="col span-8-of-10 products">
-                <section class="section-products">
+            <div class="col span-8-of-10">
+                <section>
                     <div class="row">
-                       <div *ngFor="let product of selectedProduts"  class="col span-1-of-4 item">
-                            <h3>{{product.name}}</h3>
-                            <img src="../../../assets{{product.imageURL}}">
-                            <p>
+                       <div *ngFor="let product of selectedProduts"  class="col span-1-of-4 product-container">
+                            <h3 class="product-name">{{product.name}}</h3>
+                            <div class="item">
+                            <img class="product-image" src="../../../assets{{product.imageURL}}" alt="">
+                           <div class="product-text">
+                            <p class="product-desc">
                                     {{product.description}}
                             </p>
                             <div class="price-tag">
-                                    MRP Rs. {{product.price}} <a href="#">Buy Now</a>
+                                    <button class="btn btn-tile btn-buy" href="#"> MRP Rs. {{product.price}} Buy Now</button>
                             </div>
                         </div>
+                        </div>
+                    </div>
                     </div>
                 </section>
             </div>
