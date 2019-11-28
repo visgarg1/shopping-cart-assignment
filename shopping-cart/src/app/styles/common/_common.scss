@@ -1,0 +1,107 @@
+@import './variables';
+
+*{
+    font-family: 'Dosis','Arial';
+	font-size: 18px;
+	margin: 0;
+}
+
+/* body {
+    margin-top: 5px;
+} */
+
+
+.icon-big {
+    font-size: 200%;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.btn {
+    display: inline-block;
+    width: 20%;
+    margin-top: 5%;
+    margin-left: 10%;
+    height: auto;
+    padding: 2%;
+    background-color: grey;
+    opacity: 0.7;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    margin-bottom: -15px;   
+}
+
+.btn-text{
+    vertical-align: center;
+}
+
+
+input:hover, input:active {
+    outline: 0;
+    background: transparent;
+    border-bottom: 2px solid #1a76ac;
+    
+}
+
+
+label {
+    font-size: 70%;
+    color: #1a76ac;
+}
+
+* {-webkit-box-sizing:border-box;box-sizing:border-box}
+
+
+
+.slides-dot {
+    text-align: center;
+    margin-bottom: 2%;
+    
+}
+
+
+
+.title-text {
+    float: left;
+    margin-top: 4% !important;
+    text-align: center;
+}
+.title-text h2 {
+    margin-left: 4% ;
+    font-size: 85%;
+}
+
+
+
+.title-text p {
+    margin-top: 4%;
+    font-size: 65%;
+}
+
+
+.btn-tile {
+    display: inline-block;
+    background-color: $btn-color;
+    padding: 2%;
+    text-decoration: none;
+    color: white;
+    margin-left: 4%;
+    margin-top: 3%;
+}
+
+.clearfix {zoom: 1;}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+@media only screen and (max-width:1023px){
+    .left-image img {
+         width: 100%;
+  height: auto; 
+    }
+}
