@@ -1,5 +1,7 @@
+@import '../../../styles/common/variables';
+
 footer {
-    background-color: grey;
+    background-color: $color-grey;
     opacity: 0.7;
 }
 

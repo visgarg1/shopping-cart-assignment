@@ -1,3 +1,5 @@
+@import '../../styles/common/variables';
+
 .section-plp {
     width: 100%;
     margin: 0 auto;
@@ -9,7 +11,7 @@
 }
 
 .product-container {
-    border-bottom: 1px solid #d6d5d5;
+    border-bottom: 1px solid $color-grey;
 }
 
  .product-text {
@@ -29,20 +31,17 @@
 
 .btn-buy {
     width: 90%;
-    background-color: #d10325;
+    background-color: $btn-color;
   /*   border-radius: 5px; */
     border: none;
     margin: 15px 5px;
     cursor: pointer;
     &:hover {
-         background-color: #a7011c;
+         background-color: $btn-color-active;
     }
     
 }
 
-/* .btn-buy:hover {
-    background-color: #a7011c;
-} */
 
 .item {
     display: flex;
@@ -60,7 +59,11 @@
 }
 
 .active {
-    background-color: #dddddd;
+    background-color: $color-darkgrey;
+}
+
+.desktop-buy {
+    display: none;
 }
 
 @media only screen and (min-width:1023px){
@@ -71,7 +74,7 @@
 @media only screen and (min-width:768px){
     .sidebar {
         display: block;
-        background-color: rgb(241, 241, 241);
+        background-color: $color-grey;
         height: 100vh;
         cursor: pointer;
     }
@@ -81,14 +84,14 @@
     }
     
     .sidebar ul li {
-        border-bottom: 1px solid grey;
+        border-bottom: 1px solid $color-darkgrey;
         list-style: none;
         padding: 10px;
     
     }
     .section-plp {
         width: 80%;
-        margin: 0 auto;
+        margin: 5px auto;
     }
     .item {
         flex-direction: column;
@@ -109,29 +112,28 @@
     .col {
         margin: 0;
     }
+    .btn-buy {
+        margin: 5px 5px;
+    }
 }
 /* .item img {
     width: 100%;
 } */
 
 .item p {
-    background-color:rgb(241, 241, 241);
+    background-color: $color-grey;
 }
 
 .item {
 box-sizing: border-box;
-border-bottom: 1px dotted rgb(241, 241, 241);
-border-right: 3px solid rgb(241, 241, 241);
+border-bottom: 1px dotted $color-grey;
+border-right: 3px solid $color-grey;
 padding: 5px;
 }
 
-/* .price-tag a {
-    background-color: rgb(238, 92, 116);
-    color: #fff;
-    text-decoration: none;
-    padding: 5px;
-    margin-left: 2px;
-} */
+.desktop-buy {
+    display: inline-block;
+}
 
 @media only screen and (max-width: 600px) {
     .item {
