@@ -5,6 +5,11 @@
     margin: 0 auto;
 }
 
+li a {
+    color: black;
+    text-decoration: none;
+}
+
 .sidebar {
     display: none;
     
@@ -30,7 +35,7 @@
 }
 
 .btn-buy {
-    width: 90%;
+    width: 95%;
     background-color: $btn-color;
   /*   border-radius: 5px; */
     border: none;
@@ -80,7 +85,7 @@
     }
     
     .sidebar ul {
-        padding-left: 10px;
+        padding-left: 1px;
     }
     
     .sidebar ul li {

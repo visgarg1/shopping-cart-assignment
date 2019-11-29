@@ -5,11 +5,12 @@
     </head>
 
     <body>
-       <section class="section-plp">
+       <section id="main-content" tabindex="-1" class="section-plp">
         <div class="row">
             <nav class="col span-2-of-10 sidebar">
                 <ul *ngFor="let category of categories; let i = index">
-                    <li (click)="categorySelect(category.value,i)" [class.active]="categorySelected === category.value" >{{category.name}}</li>
+                    <li (click)="categorySelect(category.value,i)" [class.active]="categorySelected === category.value">
+                        <a [routerLink]="" >{{category.name}}</a></li>
                 </ul>
             </nav>
 
@@ -26,11 +27,7 @@
                                     {{product.description}}
                             </p>
                             <div class="price-tag">
-                                <!-- <div class="desktop-buy">
-                                   MRP Rs. {{product.price}}
-                                    <button class="btn btn-tile btn-buy" href="#"> Buy Now</button>
-                                </div> -->
-                                    <button class="btn btn-tile btn-buy" href="#"> MRP Rs. {{product.price}} Buy Now</button>
+                                    <button class="btn btn-tile btn-buy"  attr.aria-label="{{product.name}} Rs. {{product.price}} Buy Now" href="#">  Rs. {{product.price}} Buy Now</button>
                             </div>
                         </div>
                         </div>

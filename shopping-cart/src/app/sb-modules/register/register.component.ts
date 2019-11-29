@@ -3,6 +3,7 @@ import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { passwordCustomValidator } from 'src/app/shared/directive/password-custom-validator.directive';
 import { MustMatch } from 'src/app/shared/directive/matchPassword.validator';
 import { Router } from '@angular/router';
+import { ShoppingCartDataService } from 'src/app/services/shopping-cart-data.service';
 
 @Component({
   selector: 'app-register',
@@ -13,7 +14,7 @@ export class RegisterComponent implements OnInit {
   registerForm: FormGroup;
   passwordMatchFlag = false;
 
-  constructor(private fb: FormBuilder, private route: Router) { }
+  constructor(private fb: FormBuilder, private route: Router, private shoppingCartDataService: ShoppingCartDataService) { }
 
   ngOnInit() {
     this.registerForm = this.fb.group({
@@ -26,6 +27,7 @@ export class RegisterComponent implements OnInit {
     }, {
       validator: MustMatch('password', 'confirmpassword')
   });
+    this.shoppingCartDataService.urlLocation.next(`${window.location.pathname}#main-content`);
   }
 
   get f() { return this.registerForm.controls; }
@@ -40,7 +42,7 @@ export class RegisterComponent implements OnInit {
   checkPasswordMatch() {
     this.passwordMatchFlag = true;
   }
-  checkPasswordMatchFocus(){
+  checkPasswordMatchFocus() {
     this.passwordMatchFlag = false;
   }
 

@@ -33,7 +33,8 @@ export class PlpComponent implements OnInit {
   homeproductId: string;
  
   ngOnInit() {
-      this.fetchProducts();
+    this.shoppingCartDataService.urlLocation.next(`${window.location.pathname}#main-content`);
+    this.fetchProducts();
   }
 
 

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ApiEndPoints } from '../../app/core/constants/api-endpoint';
-import { Observable, of } from 'rxjs';
+import { Observable, of, Subject } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { BannersResponse } from '../models/banners-res-model';
 import { CategoriesResponse } from '../models/categories-res';
@@ -15,6 +15,7 @@ export class ShoppingCartDataService {
   constructor(private http: HttpClient) { }
 
   private Baseurl = 'http://localhost:5000';
+  urlLocation = new Subject();
 
   getBanners(): Observable<BannersResponse[]> {
     const URL = `${this.Baseurl}${ApiEndPoints.GET_HOME_BANNERS}`;

@@ -1,5 +1,6 @@
 <header>
-
+  <a class="skip-main no-outline" [href]="skipLinkPath">Skip to main content</a>
+  <!-- <h1>Skip to Main Content - Keyboard Accessible</h1> -->
   <div class="row desktop">
     <div class="col span-1-of-3">
       <a routerLink='/login' title="sabka bazar"> <img src="../../../assets/images/logo.png" alt="sabka bazar logo"></a>
@@ -26,7 +27,7 @@
   </div>
 
 
-  <div class="topnav">
+  <nav class="topnav">
     <a routerLink='/login'> <img src="../../../assets/images/logo.png" alt="sabka bazar logo" title="sabka bazar"
         class="logo-img"></a>
     <div [ngClass]="addHamburgerCss === true ? 'myLinks' : 'myLinksHide'" >
@@ -42,7 +43,7 @@
   <a class="icon" (click)="hamburgerClicked()"> 
       <i class="fa fa-bars"></i>
     </a>
-  </div>
+  </nav>
 
 
 

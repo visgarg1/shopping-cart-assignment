@@ -19,8 +19,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
   constructor(private shoppingCartDataService: ShoppingCartDataService, private router: Router ) { }
   banners: BannersResponse[];
   categories: CategoriesResponse[];
+  skipLinkPath: string;
 
   ngOnInit() {
+    this.shoppingCartDataService.urlLocation.next(`${window.location.pathname}#main-content`);
     this.getBannersData();
     this.getCategories();
     this.showSlides(this.slideIndex);
