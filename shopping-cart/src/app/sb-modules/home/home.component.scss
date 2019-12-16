@@ -144,13 +144,25 @@
       justify-content: space-evenly;
       height: auto;
       margin:0 2%;
+    /*   border-bottom: 2px solid red ; */
+      text-align:center;
+      padding-bottom:2px;
+      background: /* gradient can be an image */
+        linear-gradient(
+          to left, white, #cfcfcf 25%,  #cfcfcf 75%, white
+        )
+        left 
+        bottom  
+        no-repeat; 
+      background-size:100% 2px ;/* if linear-gradient, we need to resize it */
+         /*  border-bottom-color: linear-gradient(to left, white, #cfcfcf 25%,  #cfcfcf 75%, white); */
   }
 
-  .below-row {
+  /* .below-row {
     height: 2px;
     
     background: linear-gradient(to left, white, #cfcfcf 25%,  #cfcfcf 75%, white);
-  }
+  } */
 
   @media only screen and (min-width:768px) {
     .home-tile {
