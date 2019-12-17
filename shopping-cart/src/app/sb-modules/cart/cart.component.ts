@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ShoppingCartDataService } from 'src/app/services/shopping-cart-data.service';
 
 @Component({
   selector: 'app-cart',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CartComponent implements OnInit {
 
-  constructor() { }
+   openCart = false;
+  constructor(private shoppingCartDataService: ShoppingCartDataService) { }
 
   ngOnInit() {
+this.shoppingCartDataService.openCloseCart.subscribe(data => this.openCart = data);
   }
-
+  closeCart() {
+    this.shoppingCartDataService.openCloseCart.next(false);
+  }
 }

@@ -2,23 +2,22 @@
   <a class="skip-main no-outline" [href]="skipLinkPath">Skip to main content</a>
   <!-- <h1>Skip to Main Content - Keyboard Accessible</h1> -->
   <div class="row desktop">
-    <div class="col span-1-of-3">
-      <a routerLink='/login' title="sabka bazar"> <img src="../../../assets/images/logo.png" alt="sabka bazar logo"></a>
-    </div>
+ 
+      <a class="col span-1-of-3" routerLink='/login' title="sabka bazar"> <img src="../../../assets/images/logo.png" alt="sabka bazar logo"></a>
 
     <nav aria-label="Global links" class="col span-1-of-3 navigate">
       <ul role="presentation">
-        <li role="nav item"><a routerLink="/home">Home</a></li>
-        <li role="nav item"><a routerLink="/plp">Products</a></li>
+        <li role="nav item"><a routerLink="/home" title="home">Home</a></li>
+        <li role="nav item"><a routerLink="/plp" title="products">Products</a></li>
       </ul>
     </nav>
-    <div  class="signin-col span-1-of-3 ">
+    <div  class="signin-col span-1-of-3">
       <nav aria-label="signin-nav navigation" class="row">
         <ul class="signin-links" role="presentation" >
-          <li role="nav item"><a routerLink="/login">Sign in</a></li>
-          <li role="nav item"><a routerLink="/register">Register</a></li>
+          <li role="nav item"><a routerLink="/login" title="Sign in">Sign in</a></li>
+          <li role="nav item"><a routerLink="/register" title="Register">Register</a></li>
         </ul>
-        <a href="#" class="btn btn-cart" aria-label="cart button">
+        <a class="btn btn-cart" aria-label="cart button" (click)="openCart()">
           <img src="../../../../assets/images/cart.svg" alt="cart logo" title="cart logo" class="cart-img">
           <div class="cart-items-text"> 0 items</div>
         </a>
@@ -36,7 +35,7 @@
       <a routerLink="/login" (click)="hamburgerClicked()">Login</a>
       <a routerLink="/register" (click)="hamburgerClicked()">Register</a>
     </div>
-    <a class="cart">
+    <a class="cart" (click)="openCart()">
         <img src="../../../../assets/images/cart.svg" alt="cart logo" title="cart logo" class="cart-img-mobile">
          <span class="cart-text-m">0&nbsp;items</span> 
     </a>
@@ -48,3 +47,6 @@
 
 
 </header>
+
+<app-cart></app-cart>
+<div *ngIf="openCartFlag" class="header-overlay" (click)="openCart()"></div>

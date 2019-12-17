@@ -1,1 +1,23 @@
-<p>cart works!</p>
+
+<div *ngIf="openCart" class="cart-container">
+        <header class="item-header">
+                <div class="items-text"><strong>My Cart</strong><span class="item-text-sm">(1 item)</span>
+                <p class="close-btn" (click)="closeCart()">&#10006;</p>
+                </div>
+        </header>
+
+        <section class="item-body">
+sdasdasdadasd
+        </section>
+
+        <div class="brand-banner clearfix">
+                        <img src="../../../assets/images/lowest-price.png" alt="lowest price logo" class="logo-img"> <div class="image-text">you won't find it cheaper anywhere</div>
+        </div>
+
+        <footer class="item-footer">
+                       <div class="promo-code">promo code can be applied on payment page</div>
+                       <button class="btn btn-tile btn-cart" (click)="closeCart()"><span class="btn-text">Proceed to Checkout</span><span class="price">Rs.187</span></button>
+                </footer>
+        
+</div>
+

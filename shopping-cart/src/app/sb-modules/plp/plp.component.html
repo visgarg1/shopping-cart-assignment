@@ -1,8 +1,8 @@
 
-    <head>
+  <!--   <head>
         <link  rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Dosis:400,600,700'>
         
-    </head>
+    </head> -->
 
     <body>
        <section id="main-content" tabindex="-1" class="section-plp">
@@ -20,15 +20,21 @@
                     <div class="row">
                        <div *ngFor="let product of selectedProduts"  class="col span-1-of-4 product-container">
                             <h3 class="product-name">{{product.name}}</h3>
-                            <div class="item">
+                            <div class="item">    
+                        
+                           
                             <img class="product-image" src="../../../assets{{product.imageURL}}" alt="">
                            <div class="product-text">
                             <p class="product-desc">
                                     {{product.description}}
                             </p>
-                            <div class="price-tag">
-                                    <button class="btn btn-tile btn-buy"  attr.aria-label="{{product.name}} Rs. {{product.price}} Buy Now" href="#">  Rs. {{product.price}} Buy Now</button>
+                            <div class="price-btn-mbl">
+                                    <button class="btn btn-tile btn-buy"  attr.aria-label="{{product.name}} Rs. {{product.price}} Buy Now" href="#"> Buy Now @ Rs. {{product.price}}</button>
                             </div>
+                            <div class="price-btn-desktop">
+                                   <span class="price-desktop">MRP Rs. {{product.price}}</span> 
+                                <button class="btn btn-tile btn-buy"  attr.aria-label="{{product.name}} Rs. {{product.price}} Buy Now" href="#">  Buy Now</button>
+                        </div>
                         </div>
                         </div>
                     </div>
