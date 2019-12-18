@@ -3,7 +3,7 @@
   <!-- <h1>Skip to Main Content - Keyboard Accessible</h1> -->
   <div class="row desktop">
  
-      <a class="col span-1-of-3" routerLink='/login' title="sabka bazar"> <img src="../../../assets/images/logo.png" alt="sabka bazar logo"></a>
+      <a class="col span-1-of-3" routerLink='/home' title="sabka bazar"> <img src="../../../assets/images/logo.png" alt="sabka bazar logo"></a>
 
     <nav aria-label="Global links" class="col span-1-of-3 navigate">
       <ul role="presentation">
@@ -19,7 +19,7 @@
         </ul>
         <a class="btn btn-cart" aria-label="cart button" (click)="openCart()">
           <img src="../../../../assets/images/cart.svg" alt="cart logo" title="cart logo" class="cart-img">
-          <div class="cart-items-text"> 0 items</div>
+          <div class="cart-items-text"> {{totalItems}} items</div>
         </a>
       </nav>
     </div>

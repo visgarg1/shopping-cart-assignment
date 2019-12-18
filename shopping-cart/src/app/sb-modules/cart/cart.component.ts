@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ShoppingCartDataService } from 'src/app/services/shopping-cart-data.service';
+import { CartDataService } from 'src/app/services/cart-data.service';
+import { ProductsResponse } from 'src/app/models/products-res';
 
 @Component({
   selector: 'app-cart',
@@ -9,12 +11,36 @@ import { ShoppingCartDataService } from 'src/app/services/shopping-cart-data.ser
 export class CartComponent implements OnInit {
 
    openCart = false;
-  constructor(private shoppingCartDataService: ShoppingCartDataService) { }
+   products: ProductsResponse[] = [];
+   totalItems = 0;
+   totalPrice = 0;
+  constructor(private cartData: CartDataService) { }
 
   ngOnInit() {
-this.shoppingCartDataService.openCloseCart.subscribe(data => this.openCart = data);
+this.cartData.openCloseCart.subscribe(data => this.openCart = data);
+this.cartData.cartDataChange.subscribe(() => {
+  this.products = this.cartData.products;
+  this.totalItems = this.cartData.totalCartitems;
+  this.totalPriceCalculation();
+  console.log(this.cartData.products);
+});
   }
   closeCart() {
-    this.shoppingCartDataService.openCloseCart.next(false);
+    this.cartData.openCloseCart.next(false);
   }
+  deleteProduct(product: ProductsResponse) {
+        this.cartData.deleteProduct(product);
+  }
+
+  addProduct(product: ProductsResponse) {
+          this.cartData.addProduct(product);
+  }
+
+  totalPriceCalculation(){
+    this.totalPrice = 0;
+    this.products.forEach(product => {
+      const price = product.number * product.price;
+      this.totalPrice = this.totalPrice + price;
+    });
+}
 }

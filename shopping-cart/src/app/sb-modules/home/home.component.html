@@ -10,7 +10,7 @@
 
       <!-- Full-width images with number and caption text -->
       <ng-container *ngFor="let banner of banners; let i = index">
-        <div class="mySlides fade" [ngStyle]="{'display': bannerStyle[i]}">
+        <div class="mySlides fade" [ngStyle]="{'display': bannerStyle[i]}" [attr.aria-hidden]="bannerStyle[i] == 'block' ? true: false">
          <!--  <div class="numbertext">1 / 5</div> -->
           <img src="../../../assets{{banner.bannerImageUrl}}" alt="{{banner.bannerImageAlt}}" style="width:100%">
         </div>

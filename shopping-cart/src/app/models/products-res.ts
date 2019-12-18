@@ -7,5 +7,6 @@ export interface ProductsResponse {
         category: string;
         sku: string;
         id: string;
+        number?: number;
 }
 

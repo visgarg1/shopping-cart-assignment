@@ -16,7 +16,7 @@ export class ShoppingCartDataService {
 
   private Baseurl = 'http://10.202.229.60:5000';
   urlLocation = new Subject();
-  openCloseCart = new BehaviorSubject(false);
+
 
   getBanners(): Observable<BannersResponse[]> {
     const URL = `${this.Baseurl}${ApiEndPoints.GET_HOME_BANNERS}`;

@@ -3,6 +3,7 @@ import { ShoppingCartDataService } from 'src/app/services/shopping-cart-data.ser
 import { ProductsResponse } from 'src/app/models/products-res';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { Router } from '@angular/router';
+import { CartDataService } from 'src/app/services/cart-data.service';
 
 @Component({
   selector: 'app-plp',
@@ -11,7 +12,8 @@ import { Router } from '@angular/router';
 })
 export class PlpComponent implements OnInit {
 
-  constructor(private shoppingCartDataService: ShoppingCartDataService, private router: Router) {
+  constructor(private shoppingCartDataService: ShoppingCartDataService, 
+              private router: Router, private cartData: CartDataService) {
 
     if (this.router.getCurrentNavigation() && this.router.getCurrentNavigation().extras &&
     this.router.getCurrentNavigation().extras.state &&
@@ -54,5 +56,9 @@ export class PlpComponent implements OnInit {
    this.selectedProduts = this.productsRes.filter(element => element.category === categoryCode);
    console.log(this.selectedProduts);
 
+  }
+
+  buyNow(product: ProductsResponse) {
+    this.cartData.addProduct(product);
   }
 }
