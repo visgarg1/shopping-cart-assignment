@@ -31,6 +31,15 @@
       <span class="dot" (click)="currentSlide(5)"></span>
     </div>
   </div>
+
+  <!-- <figure class="clearfix row">
+    <img  class="col span-1-of-2" src="../../../assets/images/category/baby.png" style="height:100px; width:100px;display: block; float: left;">
+    <figcaption class="clearfix col span-1-of-2" style="float: left;">
+        <h2>MaNGO</h2>
+        <p>Description here</p>
+        <button (click)="plpPageId(3)" class="btn-tile btn-home">Explore mango</button>
+    </figcaption>
+  </figure> -->
   
   <ng-container *ngFor="let category of categories; let index=index; let odd=odd; let even=even;">
     <div *ngIf="odd">

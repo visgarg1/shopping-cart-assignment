@@ -159,6 +159,8 @@
          /*  border-bottom-color: linear-gradient(to left, white, #cfcfcf 25%,  #cfcfcf 75%, white); */
   }
 
+ 
+
   /* .below-row {
     height: 2px;
     
@@ -182,6 +184,9 @@
     border-bottom: 2px solid $color-grey;
     margin: 10px 15% 0;
   }
+  .home-tile:last-child {
+    border-bottom: none ;
+}
 }
 
   @media only screen and (min-width:1023px){
