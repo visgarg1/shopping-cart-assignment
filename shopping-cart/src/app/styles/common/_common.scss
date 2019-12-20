@@ -106,6 +106,12 @@ label {
     height: 0;
     visibility: hidden;
 }
+.hidden-label {
+    display: none;
+    }
+    .label-display {
+        display: block;
+    }
 
 @media only screen and (max-width:1023px){
     .left-image img {

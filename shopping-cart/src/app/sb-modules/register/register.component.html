@@ -13,9 +13,9 @@
                     </div>
                     <div class="col span-1-of-2">
                         <div class="row form-input">
-                            <div>
-                                <label>First Name</label>
-                            </div>
+                       
+                                <label class="label-display">First Name</label>
+                          
                             <input type="text" class="email-input" formControlName="firstname" size="50"
                                 placeholder="First Name" aria-required="true" aria-describedby="name-required">
                             <div *ngIf="f.firstname.invalid && (f.firstname.dirty || f.firstname.touched)"
@@ -27,6 +27,7 @@
                         </div>
 
                         <div class="row form-input">
+                                <label class="hidden-label" for="Last Name">Last Name</label>
                             <input type="text" formControlName="lastname" size="50" placeholder="Last Name"
                              aria-required="true" aria-describedby="last-required">
                             <div *ngIf="f.lastname.invalid && (f.lastname.dirty || f.lastname.touched)"
@@ -38,6 +39,7 @@
                         </div>
 
                         <div class="row form-input">
+                                <label class="hidden-label" for="email">Email</label>
                             <input type="text" formControlName="email" size="50" placeholder="Email"
                             aria-describedby="email-required" aria-required="true">
                             <div *ngIf="f.email.invalid && (f.email.dirty || f.email.touched)"
@@ -52,6 +54,7 @@
                         </div>
 
                         <div class="row form-input">
+                                <label class="hidden-label" for="Password">Password</label>
                             <input type="password" formControlName="password" size="50" placeholder="Password" 
                             aria-describedby="password-required" aria-required="true">
                             <div *ngIf="f.password.invalid && (f.password.dirty || f.password.touched)"
@@ -69,6 +72,7 @@
                         </div>
 
                         <div class="row form-input">
+                                <label class="hidden-label" for="Confirm Password">Confirm Password</label>
                             <input type="text" formControlName="confirmpassword" size="50"
                                 placeholder="Confirm Password" (focusout)="checkPasswordMatch()" (focus)="checkPasswordMatchFocus()" 
                                 aria-describedby="confirm-required" aria-required="true">
