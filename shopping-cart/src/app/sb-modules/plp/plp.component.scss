@@ -76,6 +76,27 @@ li a {
     display: none;
 }
 
+.topnav {
+    display: block;
+}
+
+.open-dropdown{
+    padding: 8px;
+    color: white;
+    background-color: $btn-color;
+}
+
+.myLinks {
+    display: block;
+    background-color:$color-grey;
+    list-style: none;
+    padding: 10px;
+}
+.myLinksHide {
+    display: none;
+}
+
+
 @media only screen and (min-width:1023px){
  /*    .price-desktop {
         background-color: white;
@@ -95,6 +116,7 @@ li a {
     .price-btn-mbl {
         display: none;
     }
+    
 }
 
 @media only screen and (min-width:768px){
@@ -140,6 +162,9 @@ li a {
     }
     .btn-buy {
         margin: 0px 5px;
+    }
+    .topnav {
+        display: none;
     }
 }
 /* .item img {

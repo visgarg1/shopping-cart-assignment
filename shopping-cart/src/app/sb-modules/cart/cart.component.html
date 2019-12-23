@@ -1,7 +1,7 @@
 
 <div *ngIf="openCart" class="cart-container" [ngStyle]="{'background-color': products.length > 0 ? 'rgb(214, 214, 214)': 'white'}">
         <header class="item-header">
-                <div class="items-text"><strong>My Cart</strong><span class="item-text-sm" *ngIf="products.length > 0">({{totalItems}} item)</span>
+                <div class="items-text"><strong>My Cart</strong><span class="item-text-sm" *ngIf="products.length > 0">&nbsp;({{totalItems}} item)</span>
                 <button class="close-btn" (click)="closeCart()" aria-label="Close dialog">&#10006;</button>
                 </div>
         </header>
@@ -10,10 +10,11 @@
                 <div class="product" *ngIf="product.number > 0">
                         <img class="product-image" src="../../../assets{{product.imageURL}}" alt="" >
                 <div class="product-name">{{product.name}}</div>
-                <div class="porduct-num product-minus" (click) = "deleteProduct(product)"><span class="minus">-</span></div>
+                <button class="porduct-num product-minus" (click) = "deleteProduct(product)" aria-label="decrement" tabindex="0" role="button" attr.aria-label="{{product.name}} and {{product.price}} decrement one quantity"><span class="minus">-</span></button>
                 <span class="product-number">{{product.number}}</span>
-                <div class="porduct-num product-plus" (click)="addProduct(product)"><span class="plus">+</span></div>
-                <span class="product-mutiple">&times;</span>
+                <button class="porduct-num product-plus" (click)="addProduct(product)" aria-label="increment" tabindex="0" role="button"  attr.aria-label="{{product.name}} and {{product.price}} Rupees increment one quantity"><span class="plus">+</span></button>
+               
+                <span class="product-mutiple" [attr.aria-label]="'the rating is ' + rating + ' out of ' + starAmount + ' stars'">&times;</span>
                 <span class="product-price">{{product.price}}</span>
                 <span class="product-total-price">{{product.price*product.number}}</span>
         </div>

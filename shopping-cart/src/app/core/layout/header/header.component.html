@@ -19,21 +19,22 @@
         </ul>
         <button class="btn btn-cart" aria-label="cart button" (click)="openCart()">
           <img src="../../../../assets/images/cart.svg" alt="cart logo" title="cart logo" class="cart-img">
-          <div class="cart-items-text"> {{totalItems}} items</div>
+          <div class="cart-items-text" *ngIf="totalItems == 0"> {{totalItems}} item</div>
+          <div class="cart-items-text" *ngIf="totalItems > 0"> {{totalItems}} items</div>
         </button>
       </nav>
     </div>
   </div>
 
 
-  <nav class="topnav">
+  <nav aria-label="Global links" class="topnav">
     <a routerLink='/login'> <img src="../../../assets/images/logo.png" alt="sabka bazar logo" title="sabka bazar"
         class="logo-img"></a>
     <div [ngClass]="addHamburgerCss === true ? 'myLinks' : 'myLinksHide'" >
-      <a routerLink="/home" (click)="hamburgerClicked()">Home</a>
-      <a routerLink="/plp" (click)="hamburgerClicked()">Products</a>
-      <a routerLink="/login" (click)="hamburgerClicked()">Login</a>
-      <a routerLink="/register" (click)="hamburgerClicked()">Register</a>
+      <a routerLink="/home" (click)="hamburgerClicked()" title="home">Home</a>
+      <a routerLink="/plp" (click)="hamburgerClicked()" title="products">Products</a>
+      <a routerLink="/login" (click)="hamburgerClicked()" title="Sign in">Login</a>
+      <a routerLink="/register" (click)="hamburgerClicked()"  title="Register">Register</a>
     </div>
     <a class="cart" (click)="openCart()">
         <img src="../../../../assets/images/cart.svg" alt="cart logo" title="cart logo" class="cart-img-mobile">

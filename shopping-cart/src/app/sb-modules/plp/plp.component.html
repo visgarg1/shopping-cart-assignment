@@ -16,6 +16,15 @@
             </nav>
         </aside>
 
+        <nav aria-label="Global links" class="topnav">
+            <div class="open-dropdown" (click)="dropdownToggle()">{{dropdwonTitleText}}</div>
+                <ul class="dropdown" [ngClass]="dropdownFlag === true ? 'myLinks' : 'myLinksHide'">
+                    <li *ngFor="let category of categories; let i = index" (click)="categorySelect(category.value,i)" [class.active]="categorySelected === category.value">
+                        <a [routerLink]="" [title]="category.name" >{{category.name}}</a></li>
+                </ul>
+              </nav>
+            
+
 
            <!--  <div > -->
                 <section class="col span-8-of-10">

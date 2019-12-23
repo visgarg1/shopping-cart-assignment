@@ -18,6 +18,9 @@ export class PlpComponent implements OnInit {
   categorySelected: string;
   selectUnselectFlag = false;
   homeproductId: string;
+  dropdownFlag = false;
+  dropdwonTitleText = 'Product Sidebar';
+  selectedCategoryCode = '';
 
   constructor(private shoppingCartDataService: ShoppingCartDataService,
               private router: Router, private cartData: CartDataService) {
@@ -55,17 +58,36 @@ export class PlpComponent implements OnInit {
   categorySelect(categoryCode: string) {
     this.selectUnselectFlag = !this.selectUnselectFlag;
     this.selectUnselectFlag = this.categorySelected !== categoryCode ? true : this.selectUnselectFlag;
+    this.selectedCategoryCode = categoryCode;
+    this.dropDownTextName();
     if (this.selectUnselectFlag) {
       this.categorySelected = categoryCode;
       this.selectedProduts = this.productsRes.filter(element => element.category === categoryCode);
+      this.dropdownFlag = false;
     } else {
       this.categorySelected = '';
       this.homeproductId = '';
       this.fetchProducts();
+      this.dropdwonTitleText = 'Product Sidebar';
+      this.dropdownFlag = false;
     }
   }
 
   buyNow(product: ProductsResponse) {
     this.cartData.addProduct(product);
+  }
+
+  dropdownToggle() {
+    this.dropdownFlag = !this.dropdownFlag;
+  }
+
+  dropDownTextName() {
+    if (this.dropdownFlag) {
+      this.categories.find(element => {
+       if (element.value === this.selectedCategoryCode) {
+         this.dropdwonTitleText = element.name;
+       }
+     });
+   }
   }
 }

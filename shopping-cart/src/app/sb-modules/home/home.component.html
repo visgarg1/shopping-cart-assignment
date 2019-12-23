@@ -44,7 +44,7 @@
   <ng-container *ngFor="let category of categories; let index=index; let odd=odd; let even=even;">
     <div *ngIf="odd">
         <figure class="clearfix row home-tile left-image">
-            <img  class="col span-1-of-2" src="../../../assets{{category.imageUrl}}" alt="{{category.name}}" src="../../../assets/images/category/baby.png">
+            <img  class="col span-1-of-2" src="../../../assets{{category.imageUrl}}" alt="{{category.name}}">
             <figcaption class="clearfix col title-text span-1-of-2">
                 <h2>{{category.name}}</h2>
                 <p>{{category.description}}</p>
@@ -73,7 +73,7 @@
                 <p>{{category.description}}</p>
                 <button (click)="plpPageId(category.id)" class="btn-tile btn-home">{{category.key}}</button>
             </figcaption>
-            <img  class="col span-1-of-2" src="../../../assets{{category.imageUrl}}" alt="{{category.name}}" src="../../../assets/images/category/baby.png">
+            <img  class="col span-1-of-2" src="../../../assets{{category.imageUrl}}" alt="{{category.name}}">
           </figure>
     <!-- <div class="row home-tile clearfix">
 

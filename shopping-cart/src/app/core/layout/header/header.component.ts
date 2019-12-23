@@ -16,6 +16,7 @@ export class HeaderComponent implements OnInit {
    skipLinkPath: string;
    openCartFlag = false;
    totalItems = 0;
+   item = 'items';
   ngOnInit() {
     this.shoppingCartDataService.urlLocation.subscribe((urlLocation: string) => {
       this.skipLinkPath = urlLocation;
