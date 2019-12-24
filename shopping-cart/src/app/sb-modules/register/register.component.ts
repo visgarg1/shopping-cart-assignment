@@ -33,7 +33,6 @@ export class RegisterComponent implements OnInit {
   get f() { return this.registerForm.controls; }
 
   onSubmit() {
-    console.log(this.registerForm);
     if (this.registerForm.valid) {
       this.route.navigate(['/home']);
     }

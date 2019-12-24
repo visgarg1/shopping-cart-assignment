@@ -22,7 +22,6 @@ this.cartData.cartDataChange.subscribe(() => {
   this.products = this.cartData.products;
   this.totalItems = this.cartData.totalCartitems;
   this.totalPriceCalculation();
-  console.log(this.cartData.products);
 });
   }
   closeCart() {

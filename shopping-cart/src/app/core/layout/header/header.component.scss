@@ -50,9 +50,6 @@ header {
     display: block;
 }
 
-.myLinksHide {
-    display: none;
-}
   
   .topnav a {
     color: black;
@@ -139,6 +136,7 @@ header {
     width: 145px;
     margin-top: -3px;
     border: none;
+    background-color: $color-grey;
   }
 
   .cart-img {
@@ -188,11 +186,5 @@ header {
       justify-content: space-between;
       margin: 5px 0 18px 10px;
     }
-   /*  .desktop {
-        display: none;
-    } */
-   /*  .topnav {
-        display: none;
-    } */
 }
 

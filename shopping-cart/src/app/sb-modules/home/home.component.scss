@@ -11,9 +11,6 @@
     display: none;
 }
 
-.newBlock {
-    display: block;
-}
 
 .btn-home {
   cursor: pointer;
@@ -28,8 +25,6 @@
 
 .slide-container {
     border-bottom: 2px solid $color-grey;
-    /* box-shadow: 3px 3px 2px rgb(250, 249, 249); */
- /*  margin: 0 15%; */
     }
 
     /* Slideshow container */
@@ -155,8 +150,7 @@
         left 
         bottom  
         no-repeat; 
-      background-size:100% 2px ;/* if linear-gradient, we need to resize it */
-         /*  border-bottom-color: linear-gradient(to left, white, #cfcfcf 25%,  #cfcfcf 75%, white); */
+      background-size:100% 2px ;
   }
 
  

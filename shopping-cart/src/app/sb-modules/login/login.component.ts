@@ -3,6 +3,7 @@ import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { passwordCustomValidator } from 'src/app/shared/directive/password-custom-validator.directive';
 import { Router } from '@angular/router';
 import { ShoppingCartDataService } from 'src/app/services/shopping-cart-data.service';
+import { CartDataService } from 'src/app/services/cart-data.service';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +16,8 @@ export class LoginComponent implements OnInit {
  loginForm: FormGroup;
 
   constructor(private fb: FormBuilder, private route: Router,
-              private shoppingCartDataService: ShoppingCartDataService) { }
+              private shoppingCartDataService: ShoppingCartDataService,
+              private cartData: CartDataService ) { }
 
   ngOnInit() {
     this.loginForm = this.fb.group({
@@ -29,7 +31,6 @@ export class LoginComponent implements OnInit {
   get f() { return this.loginForm.controls; }
 
   onSubmit() {
-    console.log(this.loginForm);
     this.submitted = true;
     if (this.loginForm.valid) {
       this.route.navigate(['/home']);

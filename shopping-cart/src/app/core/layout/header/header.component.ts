@@ -22,10 +22,8 @@ export class HeaderComponent implements OnInit {
       this.skipLinkPath = urlLocation;
     });
     this.cartData.openCloseCart.subscribe(data => this.openCartFlag = data);
-    console.log(this.skipLinkPath);
     this.cartData.cartDataChange.subscribe(() => {
       this.totalItems = this.cartData.totalCartitems;
-     /*  this.cartData.products.forEach(product => this.totalItems = this.totalItems + product.number); */
     });
   }
   hamburgerClicked() {
@@ -35,9 +33,6 @@ export class HeaderComponent implements OnInit {
   openCart() {
     this.openCartFlag = !this.openCartFlag;
     this.cartData.openCloseCart.next(this.openCartFlag);
-
-  /*   this.openCartFlag = !this.openCartFlag; */
- /*    console.log(this.openCartFlag); */
   }
 
 }

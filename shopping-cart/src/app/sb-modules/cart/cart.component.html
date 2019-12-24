@@ -8,11 +8,13 @@
 
         <section class="item-body" *ngFor="let product of products">
                 <div class="product" *ngIf="product.number > 0">
-                        <img class="product-image" src="../../../assets{{product.imageURL}}" alt="" >
-                <div class="product-name">{{product.name}}</div>
-                <button class="porduct-num product-minus" (click) = "deleteProduct(product)" aria-label="decrement" tabindex="0" role="button" attr.aria-label="{{product.name}} and {{product.price}} decrement one quantity"><span class="minus">-</span></button>
+                       <a href="#" [title]="product.name"><img class="product-image" src="../../../assets{{product.imageURL}}" alt="" ></a>
+                <div class="product-name" [ngStyle]="{'font-size': product.name && product.name.length > 50 ? '0.6rem' : '0.8rem'}">{{product.name}}</div>
+                <button class="porduct-num product-minus" (click) = "deleteProduct(product)" aria-label="decrement" tabindex="0" role="button" attr.aria-label="total quantity is {{product.number}} and price for one is {{product.price}} click to decrease one quantity
+                 and total price of item is {{product.price*product.number}}"><span class="minus">-</span></button>
                 <span class="product-number">{{product.number}}</span>
-                <button class="porduct-num product-plus" (click)="addProduct(product)" aria-label="increment" tabindex="0" role="button"  attr.aria-label="{{product.name}} and {{product.price}} Rupees increment one quantity"><span class="plus">+</span></button>
+                <button class="porduct-num product-plus" (click)="addProduct(product)" aria-label="increment" tabindex="0" role="button"  attr.aria-label="total quantity is {{product.number}} and price for one is {{product.price}} click to increase one quantity
+                and total price of item is {{product.price*product.number}}"><span class="plus">+</span></button>
                
                 <span class="product-mutiple" [attr.aria-label]="'the rating is ' + rating + ' out of ' + starAmount + ' stars'">&times;</span>
                 <span class="product-price">{{product.price}}</span>
@@ -31,6 +33,7 @@
 <div><p>Your favourite items are just click away</p></div>
 </div>
         </ng-template>
+
 
         <footer class="item-footer"  *ngIf="products.length > 0 ; else noProduct">
                        <div class="promo-code" >promo code can be applied on payment page</div>

@@ -1,28 +1,29 @@
+@import '../../styles/common/variables';
+
 .cart-container{
     position: fixed;
     width: 100%;
     height: 90%;
     z-index: 999;
+    overflow-y: auto;
 }
 
+
+
 .cart-background-grey {
-    background-color: rgb(214, 214, 214);
+    background-color: $color-grey;
 }
 
 .cart-background-white {
-    background-color: white;
+    background-color: $color-white;
 }
 .item-header {
-    background-color: black;
-    color: white;
-}
-.hidden {
-    display: none;
+    background-color: $color-black;
+    color: $color-white;
 }
 
 .items-text {
     padding: 20px;
-  /*   float: left; */
 }
 
 .item-text-sm {
@@ -31,21 +32,26 @@
 
 .item-body {
     margin-top: 10px;
-    background-color: white;
+    background-color:  $color-white;
 }
 
 .brand-banner {
     margin: 10px;
     /* height: 5%; */
-    background-color: white;
+    background-color:  $color-white;
 }
 
+
 .item-footer {
-    position: absolute;
+   /*  position: absolute;
     bottom: 0;
     height: 15%;
     width: 100%;
-    background-color: white;
+    background-color: white; */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color:  $color-white;
 }
 
 .promo-code {
@@ -58,15 +64,14 @@
     cursor: pointer;
     float: right;
     border: none;
-    background-color: black;
-    color: white;
+    background-color: $color-black;
+    color: $color-white;
 }
 
 .btn-cart {
     width: 93%;
     border-radius: 3px;
     text-decoration: none;
-
 }
 
 .price {
@@ -105,17 +110,17 @@ text-align: center;
 }
 .product-name {
     margin: 5px 15px;
-    position: fixed;
+    position: absolute;
     display: inline;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 .porduct-num {
     height: 20px;
     width: 20px;
-    background-color: rgb(194, 72, 93);
+    background-color: $btn-color;
     border-radius: 10px;
-    color: white;
+    color: $color-white;
      text-align: center;
     /* position: fixed; */
     display: inline-block;
@@ -179,6 +184,7 @@ text-align: center;
     
 }
 
+
 @media only screen and (min-width:1023px){
     .cart-container{
         position: fixed;
@@ -187,5 +193,8 @@ text-align: center;
         top: 12%;
         right:10%;
         z-index: 999;
+    }
+    .item-footer {
+    width: 27%;
     }
 }

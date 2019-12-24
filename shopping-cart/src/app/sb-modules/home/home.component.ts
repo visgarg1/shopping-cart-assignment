@@ -25,6 +25,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.shoppingCartDataService.urlLocation.next(`${window.location.pathname}#main-content`);
     this.getBannersData();
     this.getCategories();
+    setInterval(() =>{
+      this.slideIndex = this.slideIndex + 1;
+      this.showSlides(this.slideIndex);
+    }, 4000);
     this.showSlides(this.slideIndex);
   }
 
@@ -40,7 +44,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
   getCategories() {
     this.shoppingCartDataService.getCategories().subscribe((res: CategoriesResponse[]) => {
       this.categories = res;
-      console.log(this.categories);
     });
   }
 
@@ -67,8 +70,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
       dots[i].className = dots[i].className.replace(' active', '');
     }
     this.bannerStyle[this.slideIndex - 1] = 'block';
+    if (dots[this.slideIndex - 1] && dots[this.slideIndex - 1].className) {
     dots[this.slideIndex - 1].className += ' active';
-
+    }
   }
 
   plpPageId(id: string) {
