@@ -10,36 +10,37 @@ import { ProductsResponse } from 'src/app/models/products-res';
 })
 export class CartComponent implements OnInit {
 
-   openCart = false;
-   products: ProductsResponse[] = [];
-   totalItems = 0;
-   totalPrice = 0;
+  openCart = false;
+  products: ProductsResponse[] = [];
+  totalItems = 0;
+  totalPrice = 0;
   constructor(private cartData: CartDataService) { }
 
   ngOnInit() {
-this.cartData.openCloseCart.subscribe(data => this.openCart = data);
-this.cartData.cartDataChange.subscribe(() => {
-  this.products = this.cartData.products;
-  this.totalItems = this.cartData.totalCartitems;
-  this.totalPriceCalculation();
-});
+    this.cartData.openCloseCart.subscribe(data => this.openCart = data);
+    this.cartData.cartDataChange.subscribe(() => {
+      this.products = this.cartData.products;
+      this.totalItems = this.cartData.totalCartitems;
+      this.totalPriceCalculation();
+    });
   }
+
   closeCart() {
     this.cartData.openCloseCart.next(false);
   }
   deleteProduct(product: ProductsResponse) {
-        this.cartData.deleteProduct(product);
+    this.cartData.deleteProduct(product);
   }
 
   addProduct(product: ProductsResponse) {
-          this.cartData.addProduct(product);
+    this.cartData.addProduct(product);
   }
 
-  totalPriceCalculation(){
+  totalPriceCalculation() {
     this.totalPrice = 0;
     this.products.forEach(product => {
       const price = product.number * product.price;
       this.totalPrice = this.totalPrice + price;
     });
-}
+  }
 }

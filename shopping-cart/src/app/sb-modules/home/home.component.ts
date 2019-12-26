@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   divStyle1: any;
   divStyle2: any;
   divStyle3: any;
-  constructor(private shoppingCartDataService: ShoppingCartDataService, private router: Router ) { }
+  constructor(private shoppingCartDataService: ShoppingCartDataService, private router: Router) { }
   banners: BannersResponse[];
   categories: CategoriesResponse[];
   skipLinkPath: string;
@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.shoppingCartDataService.urlLocation.next(`${window.location.pathname}#main-content`);
     this.getBannersData();
     this.getCategories();
-    setInterval(() =>{
+    setInterval(() => {
       this.slideIndex = this.slideIndex + 1;
       this.showSlides(this.slideIndex);
     }, 4000);
@@ -44,6 +44,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   getCategories() {
     this.shoppingCartDataService.getCategories().subscribe((res: CategoriesResponse[]) => {
       this.categories = res;
+      console.log(res);
     });
   }
 
@@ -64,14 +65,14 @@ export class HomeComponent implements OnInit, AfterViewInit {
     if (n > slides.length) { this.slideIndex = 1; }
     if (n < 1) { this.slideIndex = slides.length; }
     for (i = 0; i < slides.length; i++) {
-        this.bannerStyle[i] = 'none';
+      this.bannerStyle[i] = 'none';
     }
     for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(' active', '');
     }
     this.bannerStyle[this.slideIndex - 1] = 'block';
     if (dots[this.slideIndex - 1] && dots[this.slideIndex - 1].className) {
-    dots[this.slideIndex - 1].className += ' active';
+      dots[this.slideIndex - 1].className += ' active';
     }
   }
 

@@ -12,11 +12,11 @@ export class HeaderComponent implements OnInit {
 
   constructor(private shoppingCartDataService: ShoppingCartDataService,
               private cartData: CartDataService) { }
-   addHamburgerCss = false;
-   skipLinkPath: string;
-   openCartFlag = false;
-   totalItems = 0;
-   item = 'items';
+  addHamburgerCss = false;
+  skipLinkPath: string;
+  openCartFlag = false;
+  totalItems = 0;
+  item = 'items';
   ngOnInit() {
     this.shoppingCartDataService.urlLocation.subscribe((urlLocation: string) => {
       this.skipLinkPath = urlLocation;

@@ -23,7 +23,7 @@ export class PlpComponent implements OnInit {
   selectedCategoryCode = '';
 
   constructor(private shoppingCartDataService: ShoppingCartDataService,
-              private router: Router, private cartData: CartDataService) {
+    private router: Router, private cartData: CartDataService) {
 
     if (this.router.getCurrentNavigation() && this.router.getCurrentNavigation().extras &&
       this.router.getCurrentNavigation().extras.state &&
@@ -36,7 +36,8 @@ export class PlpComponent implements OnInit {
   { name: 'Backery Cakes and Dairy', value: '5b6899123d1a866534f516de' },
   { name: 'Beverages', value: '5b675e5e5936635728f9fc30' },
   { name: 'Beauty and Hygiene', value: '5b68994e3d1a866534f516df' },
-  { name: 'Baby Care', value: '5b6899683d1a866534f516e0' }];
+  { name: 'Baby Care', value: '5b6899683d1a866534f516e0' },
+  { name: 'Seafood', value: '5b68997d3d1a866534f516e1' }];
 
   ngOnInit() {
     this.shoppingCartDataService.urlLocation.next(`${window.location.pathname}#main-content`);
@@ -84,10 +85,10 @@ export class PlpComponent implements OnInit {
   dropDownTextName() {
     if (this.dropdownFlag) {
       this.categories.find(element => {
-       if (element.value === this.selectedCategoryCode) {
-         this.dropdwonTitleText = element.name;
-       }
-     });
-   }
+        if (element.value === this.selectedCategoryCode) {
+          this.dropdwonTitleText = element.name;
+        }
+      });
+    }
   }
 }

@@ -1,14 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { passwordCustomValidator } from 'src/app/shared/directive/password-custom-validator.directive';
 import { Router } from '@angular/router';
 import { ShoppingCartDataService } from 'src/app/services/shopping-cart-data.service';
 import { CartDataService } from 'src/app/services/cart-data.service';
+import { NONE_TYPE } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class LoginComponent implements OnInit {
 

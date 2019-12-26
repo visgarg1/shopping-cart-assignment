@@ -22,11 +22,11 @@ export class RegisterComponent implements OnInit {
       lastname: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6),
-                      passwordCustomValidator(/^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]+)$/)]],
+      passwordCustomValidator(/^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]+)$/)]],
       confirmpassword: ['', Validators.required]
     }, {
       validator: MustMatch('password', 'confirmpassword')
-  });
+    });
     this.shoppingCartDataService.urlLocation.next(`${window.location.pathname}#main-content`);
   }
 
