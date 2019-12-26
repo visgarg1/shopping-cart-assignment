@@ -15,15 +15,14 @@
                                 [ngStyle]="{'font-size': product.name && product.name.length > 50 ? '0.6rem' : '0.8rem'}">
                                 {{product.name}}</div>
                         <button class="porduct-num product-minus" (click)="deleteProduct(product)"
-                                aria-label="decrement" tabindex="0" role="button" attr.aria-label="total quantity is {{product.number}} and price for one is {{product.price}} click to decrease one quantity
+                                aria-label="decrement"  attr.aria-label="total quantity is {{product.number}} and price for one is {{product.price}} click to decrease one quantity
                  and total price of item is {{product.price*product.number}}"><span class="minus">-</span></button>
                         <span class="product-number">{{product.number}}</span>
                         <button class="porduct-num product-plus" (click)="addProduct(product)" aria-label="increment"
-                                tabindex="0" role="button" attr.aria-label="total quantity is {{product.number}} and price for one is {{product.price}} click to increase one quantity
+                                 attr.aria-label="total quantity is {{product.number}} and price for one is {{product.price}} click to increase one quantity
                 and total price of item is {{product.price*product.number}}"><span class="plus">+</span></button>
 
-                        <span class="product-mutiple"
-                                [attr.aria-label]="'the rating is ' + rating + ' out of ' + starAmount + ' stars'">&times;</span>
+                        <span class="product-mutiple">&times;</span>
                         <span class="product-price">{{product.price}}</span>
                         <span class="product-total-price">{{product.price*product.number}}</span>
                 </div>
