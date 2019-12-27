@@ -132,9 +132,10 @@ header {
   ul {
     padding: 0;
   }
-  .btn-cart {
+  .btn-cart-header
+  {
     width: 145px;
-    margin-top: -3px;
+    margin-top: 1px;
     border: none;
     background-color: $color-grey;
   }
