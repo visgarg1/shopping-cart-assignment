@@ -4,6 +4,9 @@
     font-family: 'Dosis','Arial';
 	font-size: 18px;
     margin: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* body {
@@ -12,6 +15,9 @@
 
 .hidden {
     display: none;
+}
+.col {
+    margin: 0;
 }
 
 .show {
@@ -75,6 +81,9 @@ label {
     
 }
 
+.img {
+    display: block;
+}
 
 
 .title-text {

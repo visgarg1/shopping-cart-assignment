@@ -14,7 +14,7 @@ export class ShoppingCartDataService {
 
   constructor(private http: HttpClient) { }
 
-  private Baseurl = 'http://10.202.229.60:5000';
+  private Baseurl = 'http://localhost:5000';
   urlLocation = new Subject();
 
 

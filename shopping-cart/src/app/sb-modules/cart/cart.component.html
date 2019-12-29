@@ -11,8 +11,7 @@
                 <div class="product" *ngIf="product.number > 0">
                         <a href="#" [title]="product.name"><img class="product-image"
                                         src="../../../assets{{product.imageURL}}" alt=""></a>
-                        <div class="product-name"
-                                [ngStyle]="{'font-size': product.name && product.name.length > 50 ? '0.6rem' : '0.8rem'}">
+                        <div class="product-name">
                                 {{product.name}}</div>
                         <button class="porduct-num product-minus" (click)="deleteProduct(product)"
                                 aria-label="decrement"  attr.aria-label="total quantity is {{product.number}} and price for one is {{product.price}} click to decrease one quantity

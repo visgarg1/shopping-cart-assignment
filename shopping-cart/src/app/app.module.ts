@@ -12,6 +12,9 @@ import { PlpComponent } from './sb-modules/plp/plp.component';
 import { RegisterComponent } from './sb-modules/register/register.component';
 import { HeaderComponent } from './core/layout/header/header.component';
 import { FooterComponent } from './core/layout/footer/footer.component';
+import { CarouselComponent } from './shared/components/carousel/carousel.component';
+import { ButtonComponent } from './shared/components/button/button.component';
+import { AnchorComponent } from './shared/components/anchor/anchor.component';
 
 
 @NgModule({
@@ -23,7 +26,10 @@ import { FooterComponent } from './core/layout/footer/footer.component';
     PlpComponent,
     RegisterComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    CarouselComponent,
+    ButtonComponent,
+    AnchorComponent
   ],
   imports: [
     BrowserModule,

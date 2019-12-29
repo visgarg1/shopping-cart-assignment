@@ -1,8 +1,34 @@
 <header>
   <a class="skip-main no-outline" [href]="skipLinkPath">Skip to main content</a>
-  <div class="row desktop">
 
-    <a class="col span-1-of-3 logo" routerLink='/home' title="sabka bazar"> <img src="../../../assets/images/logo.png"
+
+  <div class="clearfix desktop">
+
+    <div class="header">
+      <a class="header__logo" routerLink='/home' title="sabka bazar"> <img class="header__logo--img" src="../../../assets/images/logo.png"
+        alt="sabka bazar logo"></a>
+        <nav aria-label="Global links" class="header__global-nav">
+          <ul role="presentation">
+            <li role="nav item"><a routerLink="/home" title="home">Home</a></li>
+            <li role="nav item"><a routerLink="/plp" title="products">Products</a></li>
+          </ul>
+        </nav>
+        <div class="header__singnin-nav">
+          <nav aria-label="signin-nav navigation" class="row">
+            <ul role="presentation">
+              <li role="nav item"><a routerLink="/login" title="Sign in">SignIn</a></li>
+              <li role="nav item"><a routerLink="/register" title="Register">Register</a></li>
+            </ul>
+            <button class="btn btn-cart header__cart-button" aria-label="cart button" (click)="openCart()">
+              <img src="../../../../assets/images/cart.svg" alt="cart logo" title="cart logo" class="cart-img">
+              <div class="cart-items-text" *ngIf="totalItems == 0"> {{totalItems}} item</div>
+              <div class="cart-items-text" *ngIf="totalItems > 0"> {{totalItems}} items</div>
+            </button>
+          </nav>
+        </div> 
+    </div>
+
+    <!-- <a class="col span-1-of-3 logo" routerLink='/home' title="sabka bazar"> <img src="../../../assets/images/logo.png"
         alt="sabka bazar logo"></a>
 
     <nav aria-label="Global links" class="col span-1-of-3 navigate">
@@ -23,12 +49,12 @@
           <div class="cart-items-text" *ngIf="totalItems > 0"> {{totalItems}} items</div>
         </button>
       </nav>
-    </div>
+    </div> -->
   </div>
 
 
   <nav aria-label="Global links" class="topnav">
-    <a routerLink='/login'> <img src="../../../assets/images/logo.png" alt="sabka bazar logo" title="sabka bazar"
+    <a routerLink='/home'> <img src="../../../assets/images/logo.png" alt="sabka bazar logo" title="sabka bazar"
         class="logo-img"></a>
     <div [ngClass]="addHamburgerCss === true ? 'myLinks' : 'hidden'">
       <a routerLink="/home" (click)="hamburgerClicked()" title="home">Home</a>
