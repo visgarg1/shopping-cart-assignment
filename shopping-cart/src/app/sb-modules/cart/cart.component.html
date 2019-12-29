@@ -1,5 +1,5 @@
-<div *ngIf="openCart" class="cart-container"
-        [ngStyle]="{'background-color': products.length > 0 ? 'rgb(214, 214, 214)': 'white'}">
+<div *ngIf="openCart"
+        [ngStyle]="{'background-color': products.length > 0 ? 'rgb(214, 214, 214)': 'white'}"  class="cart-container">
         <header class="item-header">
                 <div class="items-text"><strong>My Cart</strong><span class="item-text-sm"
                                 *ngIf="products.length > 0">&nbsp;({{totalItems}} item)</span>
@@ -7,8 +7,8 @@
                 </div>
         </header>
 
-        <section class="item-body" *ngFor="let product of products">
-                <div class="product" *ngIf="product.number > 0">
+        <ng-container *ngFor="let product of products">
+                <div class="item-body product" *ngIf="product.number > 0">
                         <a href="#" [title]="product.name"><img class="product-image"
                                         src="../../../assets{{product.imageURL}}" alt=""></a>
                         <div class="product-name">
@@ -26,7 +26,7 @@
                         <span class="product-total-price">{{product.price*product.number}}</span>
                 </div>
 
-        </section>
+        </ng-container>
 
         <div class="brand-banner clearfix" *ngIf="products.length > 0 ; else noProductBody">
                 <img src="../../../assets/images/lowest-price.png" alt="lowest price logo" class="logo-img">

@@ -12,9 +12,6 @@ li {
 .sidebar {
 	display: none;
 }
-.product-container {
-	border-bottom: 1px solid $color-grey;
-}
 .product-text {
 	display: flex;
 	flex-direction: column;
@@ -48,8 +45,7 @@ li {
 	flex-direction: row;
 	padding: 15px;
 	box-sizing: border-box;
-	border-bottom: 1px dotted $color-grey;
-	border-right: 3px solid $color-grey;
+	border-bottom: 1px dashed $color-grey;
 	padding: 5px;
 	p {
 		background-color: $color-grey;
@@ -112,7 +108,7 @@ li {
 			li {
 				border-bottom: 1px solid $color-darkgrey;
 				list-style: none;
-				padding: 10px;
+				padding: 18px;
 			}
 		}
 	}
@@ -123,6 +119,7 @@ li {
 	.item {
 		flex-direction: column;
 		justify-content: space-between;
+		border-right: 2px solid $color-grey;
 	}
 	.product-image {
 		width: 100%;

@@ -33,17 +33,17 @@
 
     <nav aria-label="Global links" class="col span-1-of-3 navigate">
       <ul role="presentation">
-        <li role="nav item"><a routerLink="/home" title="home">Home</a></li>
-        <li role="nav item"><a routerLink="/plp" title="products">Products</a></li>
+        <li><a routerLink="/home" title="home">Home</a></li>
+        <li><a routerLink="/plp" title="products">Products</a></li>
       </ul>
     </nav>
     <div class="signin-col span-1-of-3">
       <nav aria-label="signin-nav navigation" class="row">
         <ul class="signin-links" role="presentation">
-          <li role="nav item"><a routerLink="/login" title="Sign in">Sign in</a></li>
-          <li role="nav item"><a routerLink="/register" title="Register">Register</a></li>
+          <li><a routerLink="/login" title="Sign in">Sign in</a></li>
+          <li><a routerLink="/register" title="Register">Register</a></li>
         </ul>
-        <button class="btn btn-cart" aria-label="cart button" (click)="openCart()">
+        <button class="btn btn-cart-header" attr.aria-label="cart button, total items {{totalItems}}, click to open cart" (click)="openCart()">
           <img src="../../../../assets/images/cart.svg" alt="cart logo" title="cart logo" class="cart-img">
           <div class="cart-items-text" *ngIf="totalItems == 0"> {{totalItems}} item</div>
           <div class="cart-items-text" *ngIf="totalItems > 0"> {{totalItems}} items</div>
