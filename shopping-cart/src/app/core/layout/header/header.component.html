@@ -2,7 +2,7 @@
   <a class="skip-main no-outline" [href]="skipLinkPath">Skip to main content</a>
 
 
-  <div class="clearfix desktop">
+  <div class="desktop">
 
     <div class="header">
       <a class="header__logo" routerLink='/home' title="sabka bazar"> <img class="header__logo--img" src="../../../assets/images/logo.png"
@@ -21,8 +21,8 @@
             </ul>
             <button class="btn btn-cart header__cart-button" aria-label="cart button" (click)="openCart()">
               <img src="../../../../assets/images/cart.svg" alt="cart logo" title="cart logo" class="cart-img">
-              <div class="cart-items-text" *ngIf="totalItems == 0"> {{totalItems}} item</div>
-              <div class="cart-items-text" *ngIf="totalItems > 0"> {{totalItems}} items</div>
+              <span class="cart-items-text" *ngIf="totalItems == 0"> {{totalItems}} item</span>
+              <span class="cart-items-text" *ngIf="totalItems > 0"> {{totalItems}} items</span>
             </button>
           </nav>
         </div> 

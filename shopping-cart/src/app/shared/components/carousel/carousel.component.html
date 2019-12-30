@@ -4,21 +4,18 @@
 
         <!-- Full-width images with number and caption text -->
         <ng-container *ngFor="let banner of banners; let i = index">
-            <div class="mySlides fade" [ngStyle]="{'display': bannerStyle[i]}"
-                [attr.aria-hidden]="bannerStyle[i] == 'block' ? false: true">
-                <!--  <div class="numbertext">1 / 5</div> -->
-                <img src="../../../assets{{banner.bannerImageUrl}}" alt="{{banner.bannerImageAlt}}" style="width:100%">
-            </div>
+                <img class="mySlides fade" [ngStyle]="{'display': bannerStyle[i]}"
+                [attr.aria-hidden]="bannerStyle[i] == 'block' ? false: true" src="../../../assets{{banner.bannerImageUrl}}" alt="{{banner.bannerImageAlt}}">
         </ng-container>
 
         <!-- Next and previous buttons -->
-        <a class="prev" (click)="plusSlides(-1)">&#10094;</a>
-        <a class="next" (click)="plusSlides(1)">&#10095;</a>
+        <a class="prev"  aria-label="Previous" tabindex="0" (click)="plusSlides(-1)">&#10094;</a>
+        <a class="next" aria-label="Next"  tabindex="0"  (click)="plusSlides(1)">&#10095;</a>
     </div>
     <br>
 
     <!-- The dots/circles -->
-    <div class="slides-dot">
+    <div class="slides-dot" >
         <span class="dot" (click)="currentSlide(1)"></span>
         <span class="dot" (click)="currentSlide(2)"></span>
         <span class="dot" (click)="currentSlide(3)"></span>

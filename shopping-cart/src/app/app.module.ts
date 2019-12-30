@@ -15,6 +15,7 @@ import { FooterComponent } from './core/layout/footer/footer.component';
 import { CarouselComponent } from './shared/components/carousel/carousel.component';
 import { ButtonComponent } from './shared/components/button/button.component';
 import { AnchorComponent } from './shared/components/anchor/anchor.component';
+import { CategoryComponent } from './sb-modules/home/category/category.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { AnchorComponent } from './shared/components/anchor/anchor.component';
     FooterComponent,
     CarouselComponent,
     ButtonComponent,
-    AnchorComponent
+    AnchorComponent,
+    CategoryComponent
   ],
   imports: [
     BrowserModule,

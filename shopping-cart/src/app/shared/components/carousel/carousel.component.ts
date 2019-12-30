@@ -12,12 +12,10 @@ export class CarouselComponent implements OnInit {
   @Input() banners: BannersResponse[];
   slideIndex = 1;
   bannerStyle: any[] = [];
-  
 
   constructor() { }
 
   ngOnInit() {
-   
     setInterval(() => {
       this.slideIndex = this.slideIndex + 1;
       this.showSlides(this.slideIndex);

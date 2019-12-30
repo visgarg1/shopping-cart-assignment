@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ShoppingCartDataService } from 'src/app/services/shopping-cart-data.service';
 import { BannersResponse } from 'src/app/models/banners-res-model';
 import { CategoriesResponse } from 'src/app/models/categories-res';
-import { Router, NavigationExtras } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -15,8 +14,8 @@ export class HomeComponent implements OnInit {
   skipLinkPath: string;
   banners: BannersResponse[];
 
-  constructor(private shoppingCartDataService: ShoppingCartDataService, private router: Router) { }
-  
+  constructor(private shoppingCartDataService: ShoppingCartDataService) { }
+
   ngOnInit() {
     this.shoppingCartDataService.urlLocation.next(`${window.location.pathname}#main-content`);
     this.getBannersData();
@@ -32,18 +31,10 @@ export class HomeComponent implements OnInit {
   getCategories() {
     this.shoppingCartDataService.getCategories().subscribe((res: CategoriesResponse[]) => {
       this.categories = res;
-      console.log(res);
+      this.categories = this.categories.filter(a => a.order > 0);
+      this.categories.sort((a, b) => a.order - b.order);
+      console.log(this.categories);
     });
-  }
-
-  plpPageId(id: string) {
-    const navigationExtras: NavigationExtras = {
-      state: {
-        productId: id
-      }
-    };
-    this.router.navigate(['plp'], navigationExtras);
-    /* this.router.navigate(['action-selection'], { state: { example: 'bar' } }); */
   }
 }
 

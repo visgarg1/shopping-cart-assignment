@@ -1,0 +1,13 @@
+
+        <article class="main-container">
+                <figure  *ngFor="let category of categories" class="category">
+                        <img src="../../../assets{{category.imageUrl}}" alt="{{category.name}}">
+                        <figcaption>
+                                <h2>{{category.name}}</h2>
+                                <p>{{category.description}}</p>
+                                <button (click)="plpPageId(category.id)" class="btn-tile btn-home">Explore {{category.key}}</button>
+                              </figcaption>
+                    </figure>
+        </article>
+            
+ 

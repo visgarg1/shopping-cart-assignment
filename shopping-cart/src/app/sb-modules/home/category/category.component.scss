@@ -1,0 +1,92 @@
+@import '../../../styles/common/variables';
+
+.category {
+    display: flex;
+    justify-content: space-evenly;
+    height: 130px;
+  /*   border-bottom: 2px solid red ; */
+    text-align:center;
+    padding: 3%;
+    box-shadow: 0px 6px 5px -3px $color-darkgrey;
+    background-size:100% 2px ;
+        img {
+            height: 50px;
+            width: auto;
+            margin: auto; 
+            display: flex;
+            align-items: flex-start;
+        }
+    figcaption{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+        justify-content: space-evenly;
+        h2 {
+          font-size:  0.8rem;
+        }
+    }
+    p {
+        font-size: 0.7rem;
+    }
+    button{
+        cursor: pointer;
+        border: none;
+        padding: 2%;
+        font-size: 0.7rem;
+        margin: 0;
+        :hover {
+            background-color: $btn-color-active;
+        }
+    }
+    :nth(even) {
+        flex-direction: row-reverse;
+    }
+}
+
+.main-container{
+    .category:nth-child(even){
+        flex-direction: row-reverse;
+    }
+}
+
+  @media only screen and (min-width:768px) {
+ 
+    .category {
+      height: 140px;
+        img {
+            height: 150px;
+        }
+        button {
+            padding: 1%;
+            font-size: 0.9rem;
+        }
+        figcaption {
+          h2 {
+            font-size: 0.9rem;
+          }
+      }
+      p {
+          font-size: 0.8rem;
+      }
+    }
+
+    .left-image img { 
+        height: 150px;
+    }
+    .below-row {
+        margin: 0 200px;
+    }
+
+
+  .home-tile:last-child {
+    border-bottom: none ;
+}
+  }
+
+@media only screen and (min-width:768px) {
+  .category {
+    height: auto;
+  }
+
+}

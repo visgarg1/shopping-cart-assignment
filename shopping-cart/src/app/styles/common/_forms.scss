@@ -44,20 +44,17 @@ input {
 	background-color: $color-darkgrey;
 	font-style: italic;
 }
-@media only screen and (min-width:1023px) {
+/* @media only screen and (min-width:1023px) {
 	.title {
 		margin-left: 180px;
 	}
-}
+} */
 @media only screen and (min-width:768px) {
 	.span-1-of-2 {
 		width: 49%;
 	}
-	.btn-login {
-		width: 53%;
-	}
 	input {
-		width: 53%;
+		width: 75%;
 	}
 	.main-section-text {
 		margin-top: 30px;
