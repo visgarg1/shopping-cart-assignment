@@ -1,32 +1,33 @@
-<section id="main-content" tabindex="-1" class="row section-form">
+<section id="main-content" tabindex="-1" class="section-form">
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-
-        <div class="row">
-            <div class="col span-1-of-2 main-section-text">
-                <h1 class="title login-text">Login</h1>
-                <p class="title">Get access to your orders wish list and recommendations </p>
+        <div class="form">
+            <div class="form__text">
+                <h1>Login</h1>
+                <p>Get access to your Orders Wishlist and Recommendations </p>
             </div>
-            <div class="col span-1-of-2">
-                <div class="row form-input">
-                    <label class="label-display" for="email">Email</label>
-                    <input type="email" formControlName="email" size="50" placeholder="Email" required
-                        aria-required="true" aria-describedby="email-required">
-                    <div *ngIf="f.email.invalid && (f.email.dirty || f.email.touched)" class="alert alert-danger">
-                        <div id="email-required" *ngIf="f.email.errors.required">
+            <div class="form__section">
+                <div class="form__input">
+                    <label [ngClass]="f.email.dirty || f.email.touched ? 'label-display_active':'label-display'" for="email">Email</label>
+
+                    <input type="email" formControlName="email" size="50"  required
+                        aria-required="true" aria-describedby="email-required"
+                        (keydown.space)="$event.preventDefault();">
+
+                    <div *ngIf="f.email.invalid && (f.email.dirty || f.email.touched)" class="form__error">
+                        <div id="email-required" *ngIf="f.email.errors.required"  >
                             email is required.
                         </div>
-                        <div *ngIf="f.email.status == 'INVALID' && !f.email.errors.required">
+                        <div *ngIf="f.email.status == 'INVALID' && !f.email.errors.required" >
                             Please enter a valid email.
                         </div>
                     </div>
                 </div>
-
-                <div class="row">
-                    <label class="hidden" for="password">password</label>
-                    <input type="password" formControlName="password" size="50" placeholder="Password" required
-                        aria-required="true" aria-describedby="password-required">
-                    <div *ngIf="f.password.invalid && (f.password.dirty || f.password.touched)"
-                        class="alert alert-danger">
+                <div class="form__input">
+                    <label [ngClass]="f.password.dirty || f.password.touched ? 'label-display_active':'label-display'" for="password">password</label>
+                    <input type="password" formControlName="password" size="50"  required
+                        aria-required="true" aria-describedby="password-required"
+                        (keydown.space)="$event.preventDefault();">
+                    <div *ngIf="f.password.invalid && (f.password.dirty || f.password.touched)" class="form__error">
                         <div id="password-required" *ngIf="f.password.errors.required">
                             password is required.
                         </div>
@@ -41,6 +42,8 @@
                 </div>
                 <button href="#" class="btn-login" type="submit">Login</button>
             </div>
+
         </div>
     </form>
+
 </section>

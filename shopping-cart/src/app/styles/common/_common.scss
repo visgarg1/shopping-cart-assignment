@@ -2,7 +2,7 @@
 
 *{
     font-family: 'Dosis','Arial';
-	font-size: 18px;
+	font-size: 16px;
     margin: 0;
     margin: 0;
     padding: 0;
@@ -55,11 +55,10 @@
     }
 
 
-input:hover, input:active {
+input:hover, input:active, input:focus {
     outline: 0;
     background: transparent;
-    border-bottom: 2px solid #1a76ac;
-    
+    border-bottom: 2px solid $color-lightBlue;
 }
 
 a:hover {
@@ -68,7 +67,7 @@ a:hover {
 
 label {
     font-size: 70%;
-    color: #1a76ac;
+    color: $color-lightBlue;
 }
 
 * {-webkit-box-sizing:border-box;box-sizing:border-box}
@@ -125,9 +124,6 @@ label {
 }
 .hidden-label {
     display: none;
-    }
-    .label-display {
-        display: block;
     }
 
 @media only screen and (max-width:1023px){

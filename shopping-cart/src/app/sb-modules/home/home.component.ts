@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ShoppingCartDataService } from 'src/app/services/shopping-cart-data.service';
 import { BannersResponse } from 'src/app/models/banners-res-model';
 import { CategoriesResponse } from 'src/app/models/categories-res';
@@ -6,7 +6,8 @@ import { CategoriesResponse } from 'src/app/models/categories-res';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+/*   encapsulation: ViewEncapsulation.None */
 })
 export class HomeComponent implements OnInit {
 

@@ -1,11 +1,12 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
 import { CategoriesResponse } from 'src/app/models/categories-res';
 
 @Component({
   selector: 'sb-category',
   templateUrl: './category.component.html',
-  styleUrls: ['./category.component.scss']
+  styleUrls: ['./category.component.scss'],
+/*   encapsulation: ViewEncapsulation.None */
 })
 export class CategoryComponent implements OnInit {
 
