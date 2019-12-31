@@ -23,7 +23,7 @@ export class PlpComponent implements OnInit {
   selectedCategoryCode = '';
 
   constructor(private shoppingCartDataService: ShoppingCartDataService,
-    private router: Router, private cartData: CartDataService) {
+              private router: Router, private cartData: CartDataService) {
 
     if (this.router.getCurrentNavigation() && this.router.getCurrentNavigation().extras &&
       this.router.getCurrentNavigation().extras.state &&

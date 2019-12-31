@@ -22,9 +22,6 @@
 
             <section class="col span-8-of-10">
                 <h1 class="hidden">product listing page</h1>
-                <div *ngIf="selectedProduts && selectedProduts.length < 1">
-                    <p class="no-product">No product is available for selected category</p>
-                </div>
                 <div *ngFor="let product of selectedProduts" class="col span-1-of-4 product-container">
 
                     <h3 class="product-name">
