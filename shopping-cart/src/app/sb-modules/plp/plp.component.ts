@@ -23,7 +23,7 @@ export class PlpComponent implements OnInit {
   selectedCategoryCode = '';
 
   constructor(private shoppingCartDataService: ShoppingCartDataService,
-              private router: Router, private cartData: CartDataService) {
+              private router: Router) {
 
     if (this.router.getCurrentNavigation() && this.router.getCurrentNavigation().extras &&
       this.router.getCurrentNavigation().extras.state &&
@@ -73,9 +73,7 @@ export class PlpComponent implements OnInit {
     }
   }
 
-  buyNow(product: ProductsResponse) {
-    this.cartData.addProduct(product);
-  }
+ 
 
   dropdownToggle() {
     this.dropdownFlag = !this.dropdownFlag;

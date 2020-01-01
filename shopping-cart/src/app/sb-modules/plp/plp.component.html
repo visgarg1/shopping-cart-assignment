@@ -1,6 +1,36 @@
-<body>
+
     <section id="main-content" tabindex="-1" class="section-plp">
-        <div class="row">
+
+        <nav class="sidebar">
+            <ul>
+                <li *ngFor="let category of categories; let i = index"
+                    (click)="categorySelect(category.value,i)"
+                    [class.active]="categorySelected === category.value">
+                    <a [routerLink]="" [title]="category.name">{{category.name}}</a></li>
+            </ul>
+        </nav>
+
+      
+
+        <section class="products">
+            <nav aria-label="Global links" class="topnav">
+                <div (click)="dropdownToggle()">{{dropdwonTitleText}}</div>
+                <ul [ngClass]="dropdownFlag === true ? 'myLinks' : 'hidden'">
+                    <li *ngFor="let category of categories; let i = index" (click)="categorySelect(category.value,i)"
+                        [class.active]="categorySelected === category.value">
+                        <a [routerLink]="" [title]="category.name">{{category.name}}</a></li>
+                </ul>
+            </nav>
+
+            <h1 class="hidden">product listing page</h1>
+            <div *ngFor="let product of selectedProduts" class="product__container">
+                <sb-product [product]="product"></sb-product>
+              
+            </div>           
+        </section>
+
+    </section>
+       <!--  <div class="row">
             <aside>
                 <nav class="col span-2-of-10 sidebar">
                     <ul>
@@ -49,5 +79,5 @@
                     </div>
                 </div>           
             </section>
-        </div>
-    </section>
+        </div> -->
+    

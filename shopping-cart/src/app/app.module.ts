@@ -16,6 +16,7 @@ import { CarouselComponent } from './shared/components/carousel/carousel.compone
 import { ButtonComponent } from './shared/components/button/button.component';
 import { AnchorComponent } from './shared/components/anchor/anchor.component';
 import { CategoryComponent } from './sb-modules/home/category/category.component';
+import { ProductComponent } from './sb-modules/plp/product/product.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { CategoryComponent } from './sb-modules/home/category/category.component
     CarouselComponent,
     ButtonComponent,
     AnchorComponent,
-    CategoryComponent
+    CategoryComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
