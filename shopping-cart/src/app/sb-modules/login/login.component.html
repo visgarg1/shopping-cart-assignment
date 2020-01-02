@@ -7,7 +7,7 @@
             </div>
             <div class="form__section">
                 <div class="form__input">
-                    <label [ngClass]="f.email.dirty || f.email.touched ? 'label-display_active':'label-display'" for="email">Email</label>
+                    <label [ngClass]="f.email.dirty || f.email.touched ? 'label-display_active':'label-display'">Email</label>
 
                     <input type="email" formControlName="email" size="50"  required
                         aria-required="true" aria-describedby="email-required"
@@ -23,7 +23,7 @@
                     </div>
                 </div>
                 <div class="form__input">
-                    <label [ngClass]="f.password.dirty || f.password.touched ? 'label-display_active':'label-display'" for="password">password</label>
+                    <label [ngClass]="f.password.dirty || f.password.touched ? 'label-display_active':'label-display'">password</label>
                     <input type="password" formControlName="password" size="50"  required
                         aria-required="true" aria-describedby="password-required"
                         (keydown.space)="$event.preventDefault();">
@@ -40,7 +40,7 @@
                         </div>
                     </div>
                 </div>
-                <button href="#" class="btn-login" type="submit">Login</button>
+                <button  class="btn-login" type="submit">Login</button>
             </div>
 
         </div>

@@ -7,7 +7,7 @@
             </div>
             <div class="form__section">
                 <div class="form__input">
-                    <label [ngClass]="f.firstname.dirty || f.firstname.touched ? 'label-display_active':'label-display'" for="firstname">First Name</label>
+                    <label [ngClass]="f.firstname.dirty || f.firstname.touched ? 'label-display_active':'label-display'">First Name</label>
                     <input type="text" formControlName="firstname" size="50" 
                         aria-required="true" aria-describedby="name-required">
                     <div *ngIf="f.firstname.invalid && (f.firstname.dirty || f.firstname.touched)" class="form__error">
@@ -18,7 +18,7 @@
                 </div>
 
                 <div class="form__input">
-                        <label [ngClass]="f.lastname.dirty || f.lastname.touched ? 'label-display_active':'label-display'" for="lastname">Last Name</label>
+                        <label [ngClass]="f.lastname.dirty || f.lastname.touched ? 'label-display_active':'label-display'">Last Name</label>
                     <input type="text" formControlName="lastname" size="50"  aria-required="true"
                         aria-describedby="last-required">
                     <div *ngIf="f.lastname.dirty || f.lastname.touched" class="form__error">
@@ -28,7 +28,7 @@
                     </div>
                 </div>
                 <div class="form__input">
-                        <label [ngClass]="f.email.dirty || f.email.touched ? 'label-display_active':'label-display'" for="email">Email</label>
+                        <label [ngClass]="f.email.dirty || f.email.touched ? 'label-display_active':'label-display'">Email</label>
                     <input type="text" formControlName="email" size="50" 
                         aria-describedby="email-required" aria-required="true"  (keydown.space)="$event.preventDefault();">
                     <div *ngIf="f.email.invalid && (f.email.dirty || f.email.touched)" class="form__error">
@@ -41,7 +41,7 @@
                     </div>
                 </div>
                 <div class="form__input">
-                        <label [ngClass]="f.password.dirty || f.password.touched ? 'label-display_active':'label-display'" for="password">Password</label>
+                        <label [ngClass]="f.password.dirty || f.password.touched ? 'label-display_active':'label-display'">Password</label>
                     <input type="password" formControlName="password" size="50" 
                         aria-describedby="password-required" aria-required="true"  (keydown.space)="$event.preventDefault();">
                     <div *ngIf="f.password.invalid && (f.password.dirty || f.password.touched)" class="form__error">
@@ -57,7 +57,7 @@
                     </div>
                 </div>
                 <div class="form__input">
-                        <label [ngClass]="f.confirmpassword.dirty || f.confirmpassword.touched ? 'label-display_active':'label-display'" for="confirmpassword">Confirm Password</label>
+                        <label [ngClass]="f.confirmpassword.dirty || f.confirmpassword.touched ? 'label-display_active':'label-display'">Confirm Password</label>
                     <input type="text" formControlName="confirmpassword" size="50" 
                         (focusout)="checkPasswordMatch()" (focus)="checkPasswordMatchFocus()"
                         aria-describedby="confirm-required" aria-required="true"  (keydown.space)="$event.preventDefault();">
@@ -71,7 +71,7 @@
                         </div>
                     </div>
                 </div>
-                <button href="#" class="btn-login" type="submit">Signup</button>
+                <button  class="btn-login" type="submit">Signup</button>
             </div>
      <!--    </div> -->
     </form>
