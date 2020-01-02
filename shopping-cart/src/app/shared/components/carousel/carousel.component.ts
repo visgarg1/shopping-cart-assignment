@@ -12,6 +12,7 @@ export class CarouselComponent implements OnInit {
   @Input() banners: BannersResponse[];
   slideIndex = 1;
   bannerStyle: any[] = [];
+/*   totalSlide = ['1', '2', '3', '4', '5']; */
 
   constructor() { }
 

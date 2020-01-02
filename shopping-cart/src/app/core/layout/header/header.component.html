@@ -5,7 +5,7 @@
   <div class="desktop">
 
     <div class="header">
-      <a class="header__logo" routerLink='/home' title="sabka bazar"> <img class="header__logo--img" src="../../../assets/images/logo.png"
+      <a class="header__logo" routerLink='/home' title="sabka bazar"> <img src="../../../assets/images/logo.png"
         alt="sabka bazar logo"></a>
         <nav aria-label="Global links" class="header__global-nav">
           <ul role="presentation">
@@ -19,7 +19,7 @@
               <li role="nav item"><a routerLink="/login" title="Sign in">SignIn</a></li>
               <li role="nav item"><a routerLink="/register" title="Register">Register</a></li>
             </ul>
-            <button class="btn btn-cart header__cart-button" aria-label="cart button" (click)="openCart()">
+            <button class="btn header__cart-button" aria-label="cart button" (click)="openCart()">
               <img src="../../../../assets/images/cart.svg" alt="cart logo" title="cart logo" class="cart-img">
               <span class="cart-items-text" *ngIf="totalItems == 0"> {{totalItems}} item</span>
               <span class="cart-items-text" *ngIf="totalItems > 0"> {{totalItems}} items</span>

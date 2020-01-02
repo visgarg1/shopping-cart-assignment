@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-anchor',
@@ -6,6 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./anchor.component.scss']
 })
 export class AnchorComponent implements OnInit {
+
+  @Input() href: string;
+  @Input() title: string;
+  @Input() routerlink: string;
+  @Input() class: string;
+  /* @Input() href: string;
+  @Input() href: string;
+  @Input() href: string; */
+
 
   constructor() { }
 

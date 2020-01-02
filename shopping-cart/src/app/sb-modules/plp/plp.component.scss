@@ -19,6 +19,10 @@ li {
 	display: none;
 }
 
+.active {
+	background-color: $color-darkgrey;
+}
+
 .topnav {
 	display: block;
 	width: 100%;

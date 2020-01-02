@@ -35,17 +35,17 @@ a.skip-main:focus, a.skip-main:active {
 .header__logo {
   display: flex;
   flex: 0 1 25%;
+  img {
+    height: 80px;
+    width: auto;
+    margin-top: 5px;
+  }
 }
 
-.header__logo--img{
-  height: 80px;
-  width: auto;
-  margin-top: 5px;
-} 
 
 .header__global-nav {
  display: flex;
- flex: 0 1 60%;
+ flex: 0 1 63%;
  align-items: flex-end;
  margin-bottom: 15px;
 
@@ -184,7 +184,7 @@ header {
   ul {
     padding: 0;
   }
-  .btn-cart {
+  .header__cart-button {
     width: 120px;
     margin-left: 0;
     border: none;

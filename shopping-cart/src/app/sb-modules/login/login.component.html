@@ -14,10 +14,10 @@
                         (keydown.space)="$event.preventDefault();">
 
                     <div *ngIf="f.email.invalid && (f.email.dirty || f.email.touched)" class="form__error">
-                        <div id="email-required" *ngIf="f.email.errors.required"  >
+                        <div id="email-required" *ngIf="f.email.errors.required" tabindex="0" >
                             email is required.
                         </div>
-                        <div *ngIf="f.email.status == 'INVALID' && !f.email.errors.required" >
+                        <div *ngIf="f.email.status == 'INVALID' && !f.email.errors.required" tabindex="0">
                             Please enter a valid email.
                         </div>
                     </div>
@@ -28,14 +28,14 @@
                         aria-required="true" aria-describedby="password-required"
                         (keydown.space)="$event.preventDefault();">
                     <div *ngIf="f.password.invalid && (f.password.dirty || f.password.touched)" class="form__error">
-                        <div id="password-required" *ngIf="f.password.errors.required">
+                        <div id="password-required" *ngIf="f.password.errors.required" tabindex="0">
                             password is required.
                         </div>
                         <div *ngIf="f.password.errors.minlength && !f.password.errors.required">
                             password must be at least 6 characters long.
                         </div>
                         <div
-                            *ngIf="f.password.errors.wrongPassword && !f.password.errors.required && !f.password.errors.minlength">
+                            *ngIf="f.password.errors.wrongPassword && !f.password.errors.required && !f.password.errors.minlength" tabindex="0">
                             password must have a number and alphabet
                         </div>
                     </div>
