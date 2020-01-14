@@ -12,13 +12,13 @@ import { CategoriesResponse } from 'src/app/models/categories-res';
 export class HomeComponent implements OnInit {
 
   categories: CategoriesResponse[];
-  skipLinkPath: string;
+/*   skipLinkPath: string; */
   banners: BannersResponse[];
 
   constructor(private shoppingCartDataService: ShoppingCartDataService) { }
 
   ngOnInit() {
-    this.shoppingCartDataService.urlLocation.next(`${window.location.pathname}#main-content`);
+  /*   this.shoppingCartDataService.urlLocation.next(`${window.location.pathname}#main-content`); */
     this.getBannersData();
     this.getCategories();
   }

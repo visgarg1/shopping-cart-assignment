@@ -27,7 +27,7 @@ export class RegisterComponent implements OnInit {
     }, {
       validator: MustMatch('password', 'confirmpassword')
     });
-    this.shoppingCartDataService.urlLocation.next(`${window.location.pathname}#main-content`);
+    /* this.shoppingCartDataService.urlLocation.next(`${window.location.pathname}#main-content`); */
   }
 
   get f() { return this.registerForm.controls; }

@@ -1,5 +1,5 @@
-<section id="main-content" tabindex="-1" class="section-form">
-    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+<section id="main-content" class="section-form">
+    <form [formGroup]="loginForm" method="POST" action="null" (ngSubmit)="onSubmit()">
         <div class="form">
             <div class="form__text">
                 <h1>Login</h1>

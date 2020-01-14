@@ -15,7 +15,7 @@ export class ShoppingCartDataService {
   constructor(private http: HttpClient) { }
 
   private Baseurl = 'http://localhost:5000';
-  urlLocation = new Subject();
+/*   urlLocation = new Subject(); */
 
 
   getBanners(): Observable<BannersResponse[]> {

@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
       password: ['', [Validators.required, Validators.minLength(6), passwordCustomValidator(/^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]+)$/)]]
   });
 
-    this.shoppingCartDataService.urlLocation.next(`${window.location.pathname}#main-content`);
+   /*  this.shoppingCartDataService.urlLocation.next(`${window.location.pathname}#main-content`); */
   }
 
   get f() { return this.loginForm.controls; }

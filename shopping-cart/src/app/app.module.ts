@@ -16,6 +16,8 @@ import { CarouselComponent } from './shared/components/carousel/carousel.compone
 import { AnchorComponent } from './shared/components/anchor/anchor.component';
 import { CategoryComponent } from './sb-modules/home/category/category.component';
 import { ProductComponent } from './sb-modules/plp/product/product.component';
+import { TestDirective } from './shared/directive/test.directive';
+import { SkipToMainComponent } from './shared/components/skip-to-main/skip-to-main.component';
 
 
 @NgModule({
@@ -31,7 +33,9 @@ import { ProductComponent } from './sb-modules/plp/product/product.component';
     CarouselComponent,
     AnchorComponent,
     CategoryComponent,
-    ProductComponent
+    ProductComponent,
+    TestDirective,
+    SkipToMainComponent
   ],
   imports: [
     BrowserModule,

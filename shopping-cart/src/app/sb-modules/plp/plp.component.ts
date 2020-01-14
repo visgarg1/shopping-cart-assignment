@@ -39,7 +39,7 @@ export class PlpComponent implements OnInit {
   { name: 'Baby Care', value: '5b6899683d1a866534f516e0' }];
 
   ngOnInit() {
-    this.shoppingCartDataService.urlLocation.next(`${window.location.pathname}#main-content`);
+   /*  this.shoppingCartDataService.urlLocation.next(`${window.location.pathname}#main-content`); */
     this.fetchProducts();
   }
 

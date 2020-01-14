@@ -1,12 +1,12 @@
 
-    <section id="main-content" tabindex="-1" class="section-plp">
+    <section id="main-content" class="section-plp">
 
         <nav class="sidebar">
             <ul>
                 <li *ngFor="let category of categories; let i = index"
                     (click)="categorySelect(category.value,i)"
                     [class.active]="categorySelected === category.value">
-                    <app-anchor [routerLink]="" [title]="category.name"></app-anchor>
+                    <app-anchor [title]="category.name"></app-anchor>
                    <!--  <a [routerLink]="" [title]="category.name">{{category.name}}</a></li> -->
             </ul>
         </nav>
